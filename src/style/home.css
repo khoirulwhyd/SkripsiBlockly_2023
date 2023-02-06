@@ -17,8 +17,12 @@
     font-weight: bold;
 }
 
+/* .p {
+    font-weight: semibold;
+} */
+
 .spacing-text {
-    letter-spacing: 0.02em;
+    letter-spacing: 0.03em;
 }
 
 .btn-primary-1 {
@@ -26,7 +30,7 @@
     background-color: #199BE9;
     border-color: #66B3E1;
     font-weight: semibold;
-    letter-spacing: 0.02em;
+    letter-spacing: 0.00em;
     border-radius: 0;
     border-radius: 10px;
 }

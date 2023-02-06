@@ -39,6 +39,7 @@ export default function Workspace() {
     const toolboxCategories = {
     kind: "categoryToolbox",
     contents: [
+      // kategori blok logika
       {
         kind: "category",
         name: "Logic",
@@ -54,7 +55,7 @@ export default function Workspace() {
           },
         ],
       },
-      
+      // kategori blok looping
       {
         kind: "category",
         name: "Looping",
@@ -68,21 +69,22 @@ export default function Workspace() {
             kind: "block",
             type: "controls_for",
           },
+          {
+            kind: "block",
+            type: "controls_repeat_ext",
+          },
+          {
+            kind: "block",
+            type: "controls_whileUntil",
+          },
         ],
       },
+      // kategori blok aktuator
       {
         kind: "category",
         name: "Aktuator",
         colour: "#E86100",
         contents: [
-          // {
-          //   kind: "block",
-          //   type: "new_boundary_function",
-          // },
-          // {
-          //   kind: "block",
-          //   type: "return",
-          // },
           {
             kind: "block",
             type: "iot_devboard",
@@ -95,10 +97,6 @@ export default function Workspace() {
             kind: "block",
             type: "aktuator_relay",
           },
-          // {
-          //   kind: "block",
-          //   type: "aktuator_relay",
-          // },
           {
             kind: "block",
             type: "aktuator_buzzer",
@@ -113,6 +111,7 @@ export default function Workspace() {
           },
         ],
       },
+      // kategori blok function
       {
         kind: "category",
         name: "Function",
@@ -126,13 +125,14 @@ export default function Workspace() {
             kind: "block",
             type: "math_number",
           },
+          {
+            kind: "block",
+            type: "procedures_defnoreturn",
+          },
         ],
       },
     ],
   };
-
-
-
 
   function workspaceDidChange(workspace) {
     const code = Blockly.JavaScript.workspaceToCode(workspace);
@@ -319,8 +319,8 @@ export default function Workspace() {
               right: "5%",
               borderRadius: "10px",
             }}
-          >
-            suhu : {payload?.suhu} <br />
+          className="shadow-sm">
+            Suhu : {payload?.suhu} <br />
             kelembapan : {payload?.kelembapan} <br />
             cahaya : {payload?.cahaya} <br />
             jarak : {payload?.jarak} <br />

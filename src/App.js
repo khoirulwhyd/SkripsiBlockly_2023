@@ -6,6 +6,7 @@ import './index.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Workspace from "./Workspace";
 import Homepage from "./Homepage";
+import Pubsub from "./testRabbit/Pubsub.js";
 
 export default function App() {
   return (
@@ -15,6 +16,7 @@ export default function App() {
           <Route path='/home' element={<Homepage />} />
           <Route path='/workspace' element={<Workspace />} />
           {/* <Route path='/homepage' element={<Homepage />} /> */}
+          <Route path='/pubsub' element={<Pubsub />} />
 
           <Route path='*' element={<Navigate to='/home' replace />} />
         </Routes>

@@ -1,5 +1,7 @@
 import "./App.css";
 import "./customBlocks/custom_Blocks";
+import "./customBlocks/looping_Blocks";
+
 import React, { useEffect, useState } from "react";
 import { BlocklyWorkspace } from "react-blockly";
 import Blockly from "blockly";
@@ -7,6 +9,11 @@ import mqtt from "mqtt";
 import { PlayIcon, PauseIcon, ChevronLeftIcon } from "@heroicons/react/solid";
 import { useNavigate } from "react-router-dom";
 import toast, { Toaster } from "react-hot-toast";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faTemperatureDown } from '@fortawesome/free-solid-svg-icons';
+import { faHandHoldingDroplet } from '@fortawesome/free-solid-svg-icons';
+import { faSun } from '@fortawesome/free-solid-svg-icons';
+import { faRoad } from '@fortawesome/free-solid-svg-icons';
 
 const dataMqtt = {
   host: "168.138.160.59",
@@ -53,6 +60,10 @@ export default function Workspace() {
             kind: "block",
             type: "logic_compare",
           },
+          {
+            kind: "block",
+            type: "math_number",
+          },
         ],
       },
       // kategori blok looping
@@ -77,13 +88,21 @@ export default function Workspace() {
             kind: "block",
             type: "controls_whileUntil",
           },
+          // {
+          //   kind: "block",
+          //   type: "variables_get",
+          // },
+          {
+            kind: "block",
+            type: "math_arithmetic",
+          },
         ],
       },
       // kategori blok aktuator
       {
         kind: "category",
-        name: "Aktuator",
-        colour: "#E86100",
+        name: "Kontrol Aktuator",
+        colour: "#000000",
         contents: [
           {
             kind: "block",
@@ -109,6 +128,10 @@ export default function Workspace() {
             kind: "block",
             type: "sensor",
           },
+          {
+            kind: "block",
+            type: "variables_gets",
+          },
         ],
       },
       // kategori blok function
@@ -116,20 +139,27 @@ export default function Workspace() {
         kind: "category",
         name: "Function",
         colour: "#E90909",
-        contents: [
-          {
-            kind: "block",
-            type: "math_round",
-          },
-          {
-            kind: "block",
-            type: "math_number",
-          },
-          {
-            kind: "block",
-            type: "procedures_defnoreturn",
-          },
-        ],
+        custom: "PROCEDURE",
+        // contents: [
+        //   {
+        //     kind: "block",
+        //     type: "math_round",
+        //   },
+        //   {
+        //     kind: "block",
+        //     type: "math_number",
+        //   },
+        //   {
+        //     kind: "block",
+        //     type: "procedures_defnoreturn",
+        //   },
+        // ],
+      },
+      {
+        kind: "category",
+        name: "Variables",
+        colour: "#a55b80",
+        custom: "VARIABLE",
       },
     ],
   };
@@ -320,10 +350,14 @@ export default function Workspace() {
               borderRadius: "10px",
             }}
           className="shadow-sm">
+            <FontAwesomeIcon icon={faTemperatureDown} className="px-2" />
             Suhu : {payload?.suhu} <br />
-            kelembapan : {payload?.kelembapan} <br />
-            cahaya : {payload?.cahaya} <br />
-            jarak : {payload?.jarak} <br />
+            <FontAwesomeIcon icon={faHandHoldingDroplet} className="px-2" />
+            Kelembapan : {payload?.kelembapan} <br />
+            <FontAwesomeIcon icon={faSun} className="px-2" />
+            Cahaya : {payload?.cahaya} <br />
+            <FontAwesomeIcon icon={faRoad} className="px-2" />
+            Jarak : {payload?.jarak} <br />
           </div>
 
           {/* workspace */}

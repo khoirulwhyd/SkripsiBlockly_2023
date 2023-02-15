@@ -232,6 +232,36 @@ Blockly.JavaScript["sensor"] = function (block) {
   return [code, Blockly.JavaScript.ORDER_ATOMIC];
 };
 
+
+// block variable
+Blockly.Blocks["variables_gets"] = {
+  init: function () {
+    this.appendDummyInput()
+      .appendField(
+        new Blockly.FieldDropdown([
+          ["SUHU", "suhu"],
+          ["KELEMBAPAN", "kelembapan"],
+          ["CAHAYA", "cahaya"],
+          ["JARAK", "jarak"],
+        ]),
+        "pilihan_sensor"
+      )
+    this.setOutput(true, null);
+    this.setTooltip("");
+    this.setHelpUrl("");
+    this.setColour(330);
+  },
+};
+
+Blockly.JavaScript["variables_gets"] = function (block) {
+  var dropdown_pilihan_sensor = block.getFieldValue("pilihan_sensor");
+  var dropdown_pilihan_operator = block.getFieldValue("pilihan_operator");
+  var number_value_sensor = block.getFieldValue("value_sensor");
+  // TODO: Assemble JavaScript into code variable.
+  var code = `payload?.${dropdown_pilihan_sensor}`;
+  return [code, Blockly.JavaScript.ORDER_ATOMIC];
+};
+
 // Blockly.Blocks["perintah"] = {
 //   init: function () {
 //     this.appendDummyInput().appendField(

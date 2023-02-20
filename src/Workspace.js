@@ -88,10 +88,6 @@ export default function Workspace() {
             kind: "block",
             type: "controls_whileUntil",
           },
-          // {
-          //   kind: "block",
-          //   type: "variables_get",
-          // },
           {
             kind: "block",
             type: "math_arithmetic",
@@ -132,6 +128,14 @@ export default function Workspace() {
             kind: "block",
             type: "variables_gets",
           },
+          {
+            "kind": "block",
+            "type": "text_print",
+          },
+          {
+            "kind": "block",
+            "type": "text",
+          }
         ],
       },
       // kategori blok function
@@ -160,6 +164,17 @@ export default function Workspace() {
         name: "Variables",
         colour: "#a55b80",
         custom: "VARIABLE",
+      },
+      {
+        kind: "category",
+        name: "Ozobot",
+        colour: "#E90909",
+        contents: [
+          {
+            kind: "block",
+            type: "move_ozobot"
+          }
+        ]
       },
     ],
   };

@@ -262,6 +262,28 @@ Blockly.JavaScript["variables_gets"] = function (block) {
   return [code, Blockly.JavaScript.ORDER_ATOMIC];
 };
 
+Blockly.Blocks['move_ozobot'] = {
+  init: function () {
+    this.appendDummyInput()
+      .appendField(new Blockly.FieldLabelSerializable("Move"), "Move")
+      .appendField(new Blockly.FieldDropdown([["forward", "forward"], ["backward", "backward"]]), "moveoption")
+      .appendField(new Blockly.FieldLabelSerializable("Distance"), "Distance")
+      .appendField(new Blockly.FieldDropdown([["1step", "1step"], ["2step", "2step"], ["3step", "3step"], ["4step", "4step"], ["5step", "5step"]]), "stepoption");
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setColour(20);
+    this.setTooltip("");
+    this.setHelpUrl("");
+  }
+};
+
+Blockly.JavaScript['move_ozobot'] = function(block) {
+  var dropdown_moveoption = block.getFieldValue('moveoption');
+  var dropdown_stepoption = block.getFieldValue('stepoption');
+  // TODO: Assemble JavaScript into code variable.
+  var code = '...;\n';
+  return code;
+};
 // Blockly.Blocks["perintah"] = {
 //   init: function () {
 //     this.appendDummyInput().appendField(

@@ -17,6 +17,16 @@
     font-weight: bold;
 }
 
+.level {
+    font-size: 25px;
+    font-weight: bold;
+    font-family: "Poppins";
+}
+
+.levels {
+    font-family: "Poppins";
+}
+
 /* .p {
     font-weight: semibold;
 } */

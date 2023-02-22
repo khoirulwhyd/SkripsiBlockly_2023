@@ -360,7 +360,7 @@ export default function Workspace() {
               position: "absolute",
               zIndex: 1000,
               padding: "2rem",
-              top: "5%",
+              top: "18%",
               right: "5%",
               borderRadius: "10px",
             }}
@@ -383,6 +383,17 @@ export default function Workspace() {
               borderRadius: "10px",
             }}
           >
+            <div>
+              <p className="level text-white">Level</p>
+              <nav aria-label="Page navigation example">
+                <ul class="pagination levels">
+                  <li class="page-item"><a class="page-link" href="#">1</a></li>
+                  <li class="page-item"><a class="page-link" href="#">2</a></li>
+                  <li class="page-item"><a class="page-link" href="#">3</a></li>
+                  <li class="page-item"><a class="page-link" href="#">4 </a></li>
+                </ul>
+              </nav>
+            </div>
             <BlocklyWorkspace
               toolboxConfiguration={toolboxCategories}
               initialXml={initialXml}

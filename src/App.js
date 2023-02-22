@@ -5,6 +5,7 @@ import './index.css';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Workspace from "./Workspace";
+import Workspacelv1 from "./levels/workspacelv1.js";
 import Homepage from "./Homepage";
 import Pubsub from "./testRabbit/Pubsub.js";
 
@@ -15,6 +16,7 @@ export default function App() {
         <Routes>
           <Route path='/home' element={<Homepage />} />
           <Route path='/workspace' element={<Workspace />} />
+          <Route path='/workspace1' element={<Workspacelv1 />} />
           {/* <Route path='/homepage' element={<Homepage />} /> */}
           <Route path='/pubsub' element={<Pubsub />} />
 

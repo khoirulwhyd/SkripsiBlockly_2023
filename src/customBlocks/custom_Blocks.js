@@ -249,7 +249,7 @@ Blockly.Blocks["variables_gets"] = {
     this.setOutput(true, null);
     this.setTooltip("");
     this.setHelpUrl("");
-    this.setColour(330);
+
   },
 };
 

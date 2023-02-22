@@ -5,6 +5,7 @@
 import "../App.css";
 import "../customBlocks/custom_Blocks";
 
+import { Link } from 'react-router-dom';
 import React, { useEffect, useState } from "react";
 import { BlocklyWorkspace } from "react-blockly";
 import Blockly from "blockly";
@@ -292,17 +293,31 @@ export default function Workspace() {
                             borderRadius: "10px",
                         }}
                     >
+                        {/* start levels */}
                         <div>
-                            <p className="level text-white">Level</p>
+                            <p className="level text-white">Level Aplikasi</p>
                             <nav aria-label="Page navigation example">
-                                <ul class="pagination levels">
-                                    <li class="page-item"><a class="page-link" href="#">1</a></li>
-                                    <li class="page-item"><a class="page-link" href="#">2</a></li>
-                                    <li class="page-item"><a class="page-link" href="#">3</a></li>
-                                    <li class="page-item"><a class="page-link" href="#">4 </a></li>
+                                <ul class="pagination levels gap-1">
+                                    {/* <Link to="/workspace1" class="btn btn-primary-1 mt-3 fw-semibold">
+                                        <FontAwesomeIcon icon={faBook} className="px-2" /> Mulai Belajar Sekarang
+                                    </Link> */}
+                                    <Link to="/workspace1">
+                                        <li class="page-item"><a class="page-link active">1</a></li>
+                                    </Link>
+                                    <Link to="/workspace2">
+                                        <li class="page-item"><a class="page-link">2</a></li>
+                                    </Link>
+                                    <Link to="/workspace3">
+                                        <li class="page-item"><a class="page-link">3</a></li>
+                                    </Link>
+                                    <Link to="/workspace">
+                                        <li class="page-item"><a class="page-link">4</a></li>
+                                    </Link>
                                 </ul>
                             </nav>
                         </div>
+                        {/* end levels */}
+
                         <BlocklyWorkspace
                             toolboxConfiguration={toolboxCategories}
                             initialXml={initialXml}

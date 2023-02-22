@@ -38,7 +38,7 @@ export default function Homepage() {
                 Aplikasi ini disusun dengan tujuan untuk mempermudah
                 belajar logika pemrograman kepada mahasiswa.
               </p>
-              <Link to="/workspace" class="btn btn-primary-1 mt-3 fw-semibold">
+              <Link to="/workspace1" class="btn btn-primary-1 mt-3 fw-semibold">
                 <FontAwesomeIcon icon={faBook} className="px-2" /> Mulai Belajar Sekarang
               </Link>
           </div>

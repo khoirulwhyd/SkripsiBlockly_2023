@@ -1,7 +1,8 @@
 import "../App.css";
 import "../customBlocks/custom_Blocks";
 import "../customBlocks/looping_Blocks";
-import { Link } from 'react-router-dom';
+
+import { Link } from "react-router-dom"
 import React, { useEffect, useState } from "react";
 import { BlocklyWorkspace } from "react-blockly";
 import Blockly from "blockly";
@@ -64,9 +65,33 @@ export default function Workspace() {
                         kind: "block",
                         type: "math_number",
                     },
+                ],
+            },
+            // kategori blok looping
+            {
+                kind: "category",
+                name: "Looping",
+                colour: "#5CA65C",
+                contents: [
                     {
                         kind: "block",
-                        type: "sensor",
+                        type: "controls_forEach",
+                    },
+                    {
+                        kind: "block",
+                        type: "controls_for",
+                    },
+                    {
+                        kind: "block",
+                        type: "controls_repeat_ext",
+                    },
+                    {
+                        kind: "block",
+                        type: "controls_whileUntil",
+                    },
+                    {
+                        kind: "block",
+                        type: "math_arithmetic",
                     },
                 ],
             },
@@ -98,6 +123,10 @@ export default function Workspace() {
                     },
                     {
                         kind: "block",
+                        type: "sensor",
+                    },
+                    {
+                        kind: "block",
                         type: "variables_gets",
                     },
                     {
@@ -110,15 +139,13 @@ export default function Workspace() {
                     }
                 ],
             },
-
             {
                 kind: "category",
                 name: "Variables",
                 colour: "#a55b80",
                 custom: "VARIABLE",
             },
-
-
+            
         ],
     };
 
@@ -338,10 +365,10 @@ export default function Workspace() {
                                         <li class="page-item"><a class="page-link">1</a></li>
                                     </Link>
                                     <Link to="/workspace2">
-                                        <li class="page-item"><a class="page-link active">2</a></li>
+                                        <li class="page-item"><a class="page-link">2</a></li>
                                     </Link>
                                     <Link to="/workspace3">
-                                        <li class="page-item"><a class="page-link">3</a></li>
+                                        <li class="page-item"><a class="page-link active">3</a></li>
                                     </Link>
                                     <Link to="/workspace">
                                         <li class="page-item"><a class="page-link">4</a></li>

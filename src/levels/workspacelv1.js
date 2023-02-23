@@ -295,7 +295,7 @@ export default function Workspace() {
                     >
                         {/* start levels */}
                         <div>
-                            <p className="level text-white">Level Aplikasi</p>
+                            <p className="level text-white">Level Pembelajaran</p>
                             <nav aria-label="Page navigation example">
                                 <ul class="pagination levels gap-1">
                                     {/* <Link to="/workspace1" class="btn btn-primary-1 mt-3 fw-semibold">
@@ -310,7 +310,7 @@ export default function Workspace() {
                                     <Link to="/workspace3">
                                         <li class="page-item"><a class="page-link">3</a></li>
                                     </Link>
-                                    <Link to="/workspace">
+                                    <Link to="/workspace4">
                                         <li class="page-item"><a class="page-link">4</a></li>
                                     </Link>
                                 </ul>

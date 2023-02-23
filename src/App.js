@@ -8,6 +8,7 @@ import Workspace from "./Workspace";
 import Workspacelv1 from "./levels/workspacelv1.js";
 import Workspacelv2 from "./levels/workspacelv2.js";
 import Workspacelv3 from "./levels/workspacelv3.js";
+import Workspacelv4 from "./levels/workspacelv4.js";
 import Homepage from "./Homepage";
 import Pubsub from "./testRabbit/Pubsub.js";
 
@@ -21,6 +22,7 @@ export default function App() {
             <Route path='/workspace1' element={<Workspacelv1 />} />
             <Route path='/workspace2' element={<Workspacelv2 />} />
             <Route path='/workspace3' element={<Workspacelv3 />} />
+            <Route path='/workspace4' element={<Workspacelv4 />} />
           {/* <Route path='/homepage' element={<Homepage />} /> */}
           <Route path='/pubsub' element={<Pubsub />} />
 

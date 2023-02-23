@@ -386,7 +386,7 @@ export default function Workspace() {
           >
             {/* start levels */}
             <div>
-              <p className="level text-white">Level Aplikasi</p>
+              <p className="level text-white">Level Pembelajaran</p>
               <nav aria-label="Page navigation example">
                 <ul class="pagination levels gap-1">
                   <Link to="/workspace1">

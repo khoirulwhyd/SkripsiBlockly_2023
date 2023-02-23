@@ -2,7 +2,7 @@ import "../App.css";
 import "../customBlocks/custom_Blocks";
 import "../customBlocks/looping_Blocks";
 
-import { Link } from "react-router-dom"
+import { Link } from "react-router-dom";
 import React, { useEffect, useState } from "react";
 import { BlocklyWorkspace } from "react-blockly";
 import Blockly from "blockly";
@@ -139,13 +139,44 @@ export default function Workspace() {
                     }
                 ],
             },
+            // kategori blok function
+            {
+                kind: "category",
+                name: "Function",
+                colour: "#E90909",
+                custom: "PROCEDURE",
+                // contents: [
+                //   {
+                //     kind: "block",
+                //     type: "math_round",
+                //   },
+                //   {
+                //     kind: "block",
+                //     type: "math_number",
+                //   },
+                //   {
+                //     kind: "block",
+                //     type: "procedures_defnoreturn",
+                //   },
+                // ],
+            },
             {
                 kind: "category",
                 name: "Variables",
                 colour: "#a55b80",
                 custom: "VARIABLE",
             },
-            
+            {
+                kind: "category",
+                name: "Ozobot",
+                colour: "#E90909",
+                contents: [
+                    {
+                        kind: "block",
+                        type: "move_ozobot"
+                    }
+                ]
+            },
         ],
     };
 
@@ -358,9 +389,6 @@ export default function Workspace() {
                             <p className="level text-white">Level Pembelajaran</p>
                             <nav aria-label="Page navigation example">
                                 <ul class="pagination levels gap-1">
-                                    {/* <Link to="/workspace1" class="btn btn-primary-1 mt-3 fw-semibold">
-                                        <FontAwesomeIcon icon={faBook} className="px-2" /> Mulai Belajar Sekarang
-                                    </Link> */}
                                     <Link to="/workspace1">
                                         <li class="page-item"><a class="page-link">1</a></li>
                                     </Link>
@@ -368,10 +396,10 @@ export default function Workspace() {
                                         <li class="page-item"><a class="page-link">2</a></li>
                                     </Link>
                                     <Link to="/workspace3">
-                                        <li class="page-item"><a class="page-link active">3</a></li>
+                                        <li class="page-item"><a class="page-link">3</a></li>
                                     </Link>
                                     <Link to="/workspace4">
-                                        <li class="page-item"><a class="page-link">4</a></li>
+                                        <li class="page-item"><a class="page-link active">4</a></li>
                                     </Link>
                                 </ul>
                             </nav>

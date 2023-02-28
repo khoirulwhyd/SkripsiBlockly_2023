@@ -49,7 +49,7 @@ export default function Workspace() {
             // kategori blok logika
             {
                 kind: "category",
-                name: "Logic",
+                name: "Operasi Logika",
                 colour: "#5C81A6",
                 contents: [
                     {
@@ -68,12 +68,16 @@ export default function Workspace() {
                         kind: "block",
                         type: "sensor",
                     },
+                    {
+                        kind: "block",
+                        type: "variables_gets",
+                    },
                 ],
             },
             // kategori blok aktuator
             {
                 kind: "category",
-                name: "Kontrol Aktuator",
+                name: "Kontrol LED",
                 colour: "#000000",
                 contents: [
                     {
@@ -84,22 +88,59 @@ export default function Workspace() {
                         kind: "block",
                         type: "aktuator_led",
                     },
+                ],
+            },
+            {
+                kind: "category",
+                name: "Kontrol FAN",
+                colour: "#A5745B",
+                contents: [
                     {
                         kind: "block",
-                        type: "aktuator_relay",
-                    },
-                    {
-                        kind: "block",
-                        type: "aktuator_buzzer",
+                        type: "iot_devboard",
                     },
                     {
                         kind: "block",
                         type: "aktuator_fan",
                     },
+                ],
+            },
+            {
+                kind: "category",
+                name: "Nyalakan Buzzer",
+                colour: "#5BA55B",
+                contents: [
                     {
                         kind: "block",
-                        type: "variables_gets",
+                        type: "iot_devboard",
                     },
+                    {
+                        kind: "block",
+                        type: "aktuator_buzzer_on",
+                    },
+                ],
+            },
+
+            {
+                kind: "category",
+                name: "Matikan Buzzer",
+                colour: "#5BA58C",
+                contents: [
+                    {
+                        kind: "block",
+                        type: "iot_devboard",
+                    },
+                    {
+                        kind: "block",
+                        type: "aktuator_buzzer_off",
+                    },
+                ],
+            },
+            {
+                kind: "category",
+                name: "Text Print",
+                colour: "#5BA58C",
+                contents: [
                     {
                         "kind": "block",
                         "type": "text_print",

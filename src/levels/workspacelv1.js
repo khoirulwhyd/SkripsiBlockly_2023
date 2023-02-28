@@ -39,7 +39,6 @@ const dataMqtt = {
 export default function Workspace() {
     const navigate = useNavigate();
     const [client, setClient] = useState(null);
-
     // blockly session
     const [xml, setXml] = useState("");
     const [javascriptCode, setJavascriptCode] = useState("");
@@ -51,9 +50,10 @@ export default function Workspace() {
         kind: "categoryToolbox",
         contents: [
             // kategori blok aktuator
+
             {
                 kind: "category",
-                name: "Kontrol Aktuator",
+                name: "Kontrol LED",
                 colour: "#000000",
                 contents: [
                     {
@@ -64,26 +64,63 @@ export default function Workspace() {
                         kind: "block",
                         type: "aktuator_led",
                     },
+                ],
+            },
+            {
+                kind: "category",
+                name: "Kontrol FAN",
+                colour: "#A5745B",
+                contents: [
                     {
                         kind: "block",
-                        type: "aktuator_relay",
-                    },
-                    {
-                        kind: "block",
-                        type: "aktuator_buzzer",
+                        type: "iot_devboard",
                     },
                     {
                         kind: "block",
                         type: "aktuator_fan",
                     },
+                ],
+            },
+            {
+                kind: "category",
+                name: "Nyalakan Buzzer",
+                colour: "#5BA55B",
+                contents: [
                     {
-                        "kind": "block",
-                        "type": "text_print",
+                        kind: "block",
+                        type: "iot_devboard",
                     },
                     {
-                        "kind": "block",
-                        "type": "text",
-                    }
+                        kind: "block",
+                        type: "aktuator_buzzer_on",
+                    },
+                ],
+            },
+
+            {
+                kind: "category",
+                name: "Matikan Buzzer",
+                colour: "#5BA58C",
+                contents: [
+                    {
+                        kind: "block",
+                        type: "iot_devboard",
+                    },
+                    {
+                        kind: "block",
+                        type: "aktuator_buzzer_off",
+                    },
+                ],
+            },
+            {
+                kind: "category",
+                name: "Timer",
+                colour: "#A55B80",
+                contents: [
+                    {
+                        kind: "block",
+                        type: "set_timer",
+                    },
                 ],
             },
         ],
@@ -101,6 +138,9 @@ export default function Workspace() {
             setJavascriptCode(code);
         }
     }
+
+
+
 
     const runCode = () => {
         console.log(javascriptCode);
@@ -262,7 +302,7 @@ export default function Workspace() {
                         <PlayIcon style={{ width: "2rem", height: "2rem" }} />
                     </button>
                 </div>
-
+                
                 <div style={{ width: "100%", position: "relative" }}>
                     <div
                         style={{
@@ -284,6 +324,7 @@ export default function Workspace() {
                         <FontAwesomeIcon icon={faRoad} className="px-2" />
                         Jarak : {payload?.jarak} <br />
                     </div>
+                    
 
                     {/* workspace */}
                     <div
@@ -298,9 +339,6 @@ export default function Workspace() {
                             <p className="level text-white">Level Pembelajaran</p>
                             <nav aria-label="Page navigation example">
                                 <ul class="pagination levels gap-1">
-                                    {/* <Link to="/workspace1" class="btn btn-primary-1 mt-3 fw-semibold">
-                                        <FontAwesomeIcon icon={faBook} className="px-2" /> Mulai Belajar Sekarang
-                                    </Link> */}
                                     <Link to="/workspace1">
                                         <li class="page-item"><a class="page-link active">1</a></li>
                                     </Link>
@@ -314,7 +352,9 @@ export default function Workspace() {
                                         <li class="page-item"><a class="page-link">4</a></li>
                                     </Link>
                                 </ul>
+                                
                             </nav>
+                            
                         </div>
                         {/* end levels */}
 

@@ -50,7 +50,7 @@ export default function Workspace() {
             // kategori blok logika
             {
                 kind: "category",
-                name: "Logic",
+                name: "Operasi Logika",
                 colour: "#5C81A6",
                 contents: [
                     {
@@ -70,7 +70,7 @@ export default function Workspace() {
             // kategori blok looping
             {
                 kind: "category",
-                name: "Looping",
+                name: "Perulangan",
                 colour: "#5CA65C",
                 contents: [
                     {
@@ -98,7 +98,7 @@ export default function Workspace() {
             // kategori blok aktuator
             {
                 kind: "category",
-                name: "Kontrol Aktuator",
+                name: "Kontrol LED",
                 colour: "#000000",
                 contents: [
                     {
@@ -109,34 +109,52 @@ export default function Workspace() {
                         kind: "block",
                         type: "aktuator_led",
                     },
+                ],
+            },
+            {
+                kind: "category",
+                name: "Kontrol FAN",
+                colour: "#A5745B",
+                contents: [
                     {
                         kind: "block",
-                        type: "aktuator_relay",
-                    },
-                    {
-                        kind: "block",
-                        type: "aktuator_buzzer",
+                        type: "iot_devboard",
                     },
                     {
                         kind: "block",
                         type: "aktuator_fan",
                     },
+                ],
+            },
+            {
+                kind: "category",
+                name: "Nyalakan Buzzer",
+                colour: "#5BA55B",
+                contents: [
                     {
                         kind: "block",
-                        type: "sensor",
+                        type: "iot_devboard",
                     },
                     {
                         kind: "block",
-                        type: "variables_gets",
+                        type: "aktuator_buzzer_on",
+                    },
+                ],
+            },
+
+            {
+                kind: "category",
+                name: "Matikan Buzzer",
+                colour: "#5BA58C",
+                contents: [
+                    {
+                        kind: "block",
+                        type: "iot_devboard",
                     },
                     {
-                        "kind": "block",
-                        "type": "text_print",
+                        kind: "block",
+                        type: "aktuator_buzzer_off",
                     },
-                    {
-                        "kind": "block",
-                        "type": "text",
-                    }
                 ],
             },
             // kategori blok function
@@ -166,17 +184,7 @@ export default function Workspace() {
                 colour: "#a55b80",
                 custom: "VARIABLE",
             },
-            {
-                kind: "category",
-                name: "Ozobot",
-                colour: "#E90909",
-                contents: [
-                    {
-                        kind: "block",
-                        type: "move_ozobot"
-                    }
-                ]
-            },
+            
         ],
     };
 

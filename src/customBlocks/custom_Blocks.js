@@ -177,6 +177,7 @@ Blockly.Blocks["aktuator_fan"] = {
     this.setNextStatement(true, null);
     this.setTooltip("");
     this.setHelpUrl("");
+    this.setColour("20")
   },
 };
 
@@ -262,28 +263,28 @@ Blockly.JavaScript["variables_gets"] = function (block) {
   return [code, Blockly.JavaScript.ORDER_ATOMIC];
 };
 
-Blockly.Blocks['move_ozobot'] = {
-  init: function () {
-    this.appendDummyInput()
-      .appendField(new Blockly.FieldLabelSerializable("Move"), "Move")
-      .appendField(new Blockly.FieldDropdown([["forward", "forward"], ["backward", "backward"]]), "moveoption")
-      .appendField(new Blockly.FieldLabelSerializable("Distance"), "Distance")
-      .appendField(new Blockly.FieldDropdown([["1step", "1step"], ["2step", "2step"], ["3step", "3step"], ["4step", "4step"], ["5step", "5step"]]), "stepoption");
-    this.setPreviousStatement(true, null);
-    this.setNextStatement(true, null);
-    this.setColour(20);
-    this.setTooltip("");
-    this.setHelpUrl("");
-  }
-};
+// Blockly.Blocks['move_ozobot'] = {
+//   init: function () {
+//     this.appendDummyInput()
+//       .appendField(new Blockly.FieldLabelSerializable("Move"), "Move")
+//       .appendField(new Blockly.FieldDropdown([["forward", "forward"], ["backward", "backward"]]), "moveoption")
+//       .appendField(new Blockly.FieldLabelSerializable("Distance"), "Distance")
+//       .appendField(new Blockly.FieldDropdown([["1step", "1step"], ["2step", "2step"], ["3step", "3step"], ["4step", "4step"], ["5step", "5step"]]), "stepoption");
+//     this.setPreviousStatement(true, null);
+//     this.setNextStatement(true, null);
+//     this.setColour(20);
+//     this.setTooltip("");
+//     this.setHelpUrl("");
+//   }
+// };
 
-Blockly.JavaScript['move_ozobot'] = function(block) {
-  var dropdown_moveoption = block.getFieldValue('moveoption');
-  var dropdown_stepoption = block.getFieldValue('stepoption');
-  // TODO: Assemble JavaScript into code variable.
-  var code = '...;\n';
-  return code;
-};
+// Blockly.JavaScript['move_ozobot'] = function(block) {
+//   var dropdown_moveoption = block.getFieldValue('moveoption');
+//   var dropdown_stepoption = block.getFieldValue('stepoption');
+//   // TODO: Assemble JavaScript into code variable.
+//   var code = '...;\n';
+//   return code;
+// };
 // Blockly.Blocks["perintah"] = {
 //   init: function () {
 //     this.appendDummyInput().appendField(
@@ -329,3 +330,84 @@ Blockly.JavaScript['move_ozobot'] = function(block) {
 //   var code = `Buzzer : ${value_buzzer}`;
 //   return code;
 // };
+//custom block menyalakan buzzer on
+Blockly.Blocks["aktuator_buzzer_on"] = {
+  init: function () {
+    this.appendDummyInput("buzzer")
+      .appendField("Buzzer")
+      .appendField(
+        new Blockly.FieldDropdown([
+          ["ON", "ON"],
+        ]),
+        "kondisi"
+      );
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setTooltip("");
+    this.setHelpUrl("");
+    this.setColour("120")
+  },
+};
+Blockly.JavaScript["aktuator_buzzer_on"] = function (block) {
+  var dropdown_kondisi = block.getFieldValue("kondisi");
+  var value_buzzer = Blockly.JavaScript.valueToCode(
+    block,
+    "buzzer",
+    Blockly.JavaScript.ORDER_ATOMIC
+  );
+  // TODO: Assemble JavaScript into code variable.
+  var code = `client.publish( "piezo", "${dropdown_kondisi}", "0");`;
+  return code;
+};
+
+
+Blockly.Blocks["aktuator_buzzer_off"] = {
+  init: function () {
+    this.appendDummyInput("buzzer")
+      .appendField("Buzzer")
+      .appendField(
+        new Blockly.FieldDropdown([
+          ["OFF", "OFF"],
+        ]),
+        "kondisi"
+      );
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setTooltip("");
+    this.setHelpUrl("");
+    this.setColour("160")
+  },
+};
+Blockly.JavaScript["aktuator_buzzer_off"] = function (block) {
+  var dropdown_kondisi = block.getFieldValue("kondisi");
+  var value_buzzer = Blockly.JavaScript.valueToCode(
+    block,
+    "buzzer",
+    Blockly.JavaScript.ORDER_ATOMIC
+  );
+  // TODO: Assemble JavaScript into code variable.
+  var code = `client.publish( "piezo", "${dropdown_kondisi}", "0");`;
+  return code;
+};
+
+//custom block timer
+Blockly.Blocks['set_timer'] = {
+  init: function () {
+    this.appendDummyInput()
+      .appendField("Set Timer")
+      .appendField(new Blockly.FieldDropdown([["1", "1"], ["2", "2"], ["3", "3"], ["4", "4"], ["5", "5"]]), "number")
+      .appendField("Second");
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setColour(330);
+    this.setTooltip("");
+    this.setHelpUrl("");
+  }
+};
+
+Blockly.JavaScript['set_timer'] = function (block) {
+  var dropdown_number = block.getFieldValue('number');
+  // TODO: Assemble JavaScript into code variable.
+  var code = `client.delay(${dropdown_number*1000})`;
+  return code;
+};

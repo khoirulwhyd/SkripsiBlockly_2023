@@ -408,6 +408,6 @@ Blockly.Blocks['set_timer'] = {
 Blockly.JavaScript['set_timer'] = function (block) {
   var dropdown_number = block.getFieldValue('number');
   // TODO: Assemble JavaScript into code variable.
-  var code = `client.delay(${dropdown_number*1000})`;
+  var code = `client.delay(${dropdown_number*1000}, "0")`;
   return code;
 };

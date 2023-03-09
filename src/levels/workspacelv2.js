@@ -16,9 +16,9 @@ import { faSun } from '@fortawesome/free-solid-svg-icons';
 import { faRoad } from '@fortawesome/free-solid-svg-icons';
 
 const dataMqtt = {
-    host: "168.138.160.59",
-    clientId: "WebApp_HUB_Skripsi",
-    port: 15675,
+    host: "broker.hivemq.com",
+    clientId: "KhoirulSkripsi2023",
+    port: 8000,
     // port: 15672, // untuk port emqx: 8083, mosquitto: 8081/8080, hivemq: 8000
     username: "guest",
     password: "guest",
@@ -138,17 +138,13 @@ export default function Workspace() {
             },
             {
                 kind: "category",
-                name: "Text Print",
-                colour: "#5BA58C",
+                name: "Timer",
+                colour: "#A55B80",
                 contents: [
                     {
-                        "kind": "block",
-                        "type": "text_print",
+                        kind: "block",
+                        type: "set_timer",
                     },
-                    {
-                        "kind": "block",
-                        "type": "text",
-                    }
                 ],
             },
 
@@ -196,8 +192,8 @@ export default function Workspace() {
 
     const mqttConnect = () => {
         const { host, clientId, port, username, password } = dataMqtt;
-        const url = `ws://${host}:${port}/ws`;
-        // const url = `ws://${host}:${port}/mqtt`;
+        // const url = `ws://${host}:${port}/ws`;
+        const url = `ws://${host}:${port}/mqtt`;
         const options = {
             keepalive: 30,
             protocolId: "MQTT",

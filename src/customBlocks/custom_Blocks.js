@@ -1,5 +1,7 @@
 import Blockly from "blockly";
 import "blockly/python";
+import "webduino-blockly";
+require('webduino-blockly');
 
 Blockly.Blocks["new_boundary_function"] = {
   init: function () {
@@ -378,6 +380,7 @@ Blockly.Blocks["aktuator_buzzer_off"] = {
     this.setColour("160")
   },
 };
+
 Blockly.JavaScript["aktuator_buzzer_off"] = function (block) {
   var dropdown_kondisi = block.getFieldValue("kondisi");
   var value_buzzer = Blockly.JavaScript.valueToCode(
@@ -394,9 +397,9 @@ Blockly.JavaScript["aktuator_buzzer_off"] = function (block) {
 Blockly.Blocks['set_timer'] = {
   init: function () {
     this.appendDummyInput()
-      .appendField("Set Timer")
+      .appendField("set delay")
       .appendField(new Blockly.FieldDropdown([["1", "1"], ["2", "2"], ["3", "3"], ["4", "4"], ["5", "5"]]), "number")
-      .appendField("Second");
+      .appendField("seconds(s)");
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setColour(330);
@@ -404,10 +407,22 @@ Blockly.Blocks['set_timer'] = {
     this.setHelpUrl("");
   }
 };
-
 Blockly.JavaScript['set_timer'] = function (block) {
   var dropdown_number = block.getFieldValue('number');
+  var sensor = Blockly.JavaScript.valueToCode(
+    block,
+    "sensor",
+    Blockly.JavaScript.ORDER_ATOMIC
+  );
   // TODO: Assemble JavaScript into code variable.
-  var code = `client.delay(${dropdown_number*1000}, "0")`;
+  var code = `delay(${dropdown_number*1000});`;
   return code;
 };
+
+
+//blocklyduino example
+
+
+// goog.provide('Blockly.Blocks.custom');
+
+// goog.require('Blockly.Blocks');

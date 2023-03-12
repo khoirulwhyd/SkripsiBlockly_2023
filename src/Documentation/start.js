@@ -179,6 +179,13 @@ export default class start extends Component {
                                                         <div class="code-block">
                                                             <img src="/blok/1.png" width={200} alt="..." />
                                                         </div>
+                                                        <div class="code-blok">
+                                                            <p>Output dari block ini akan berupa sebuah pesan yang akan di inputkan oleh user. Seperti contoh pada
+                                                                gambar dibawah :
+                                                            </p>
+                                                            <img src="/blok/printoutput.png" width={400} alt="..." />
+                                                        </div>
+
                                                     </div>
                                                 </div>
                                                 <div id="blokoperasilogika" class="section-block">
@@ -192,7 +199,7 @@ export default class start extends Component {
                                                         <img src="/blok/logicifelse.png" width={150} alt="..." />
                                                     </div>
                                                     <div class="code-block">
-                                                        <h6>Blok Gerbang Logika</h6>
+                                                        <h6>Blok Kondisi</h6>
                                                         <img src="/blok/logicgerbang.png" width={150} alt="..." />
                                                     </div>
                                                 </div>
@@ -233,13 +240,120 @@ export default class start extends Component {
                                                     </div>
                                                 </div>
                                             </section>
-                                            <section id="code-section" class="doc-section">
-                                                <h2 class="section-title">Code</h2>
+                                            <section id="operasilogikablockly" class="doc-section">
+                                                <h2 class="section-title">Operasi Logika Blockly</h2>
                                                 <div class="section-block">
                                                     <p>
-                                                        <a href="https://prismjs.com/" target="_blank">PrismJS</a> is used as the syntax highlighter here. You can <a href="https://prismjs.com/download.html" target="_blank">build your own version</a> via their website should you need to.
+                                                        Pada bagian ini mencakup beberapa operasi logika diantaranya Pencabangan,
+                                                        Perulangan, Bagaimana menggunakan variabel, dan bagaimana menggunakan function
                                                     </p>
                                                 </div>
+                                                <div id="percabangan" class="section-block">
+                                                    <h3 class="block-title">Percabangan</h3>
+                                                    <p> Operasi logika percabangan pada website ini mencakup percabangan if, dan bercabangan
+                                                        if bersarang.
+                                                    </p>
+                                                    <div class="code-block">
+                                                        <h5>Percabangan If</h5>
+                                                        <p>
+                                                            Percabangan if memuat logika seperti pada contoh gambar dibawah
+                                                        </p>
+                                                        <img src="/blok/if.png" width={200} alt="..." />
+                                                        <div class="code-block">
+                                                            <p>
+                                                                Pada logika diatas memuat 3 blok yaitu <strong>blok logika if else, blok kondisi logika
+                                                                    yang melibatkan value suhu, dan blok kontrol LED</strong> Maksud dari penyusunan
+                                                                blok diatas adalah :
+                                                            </p>
+                                                            <p>
+                                                                Jika <strong>SUHU lebih dari 20 </strong>maka 1 LED akan hidup. Sedangkan
+                                                                jika <strong>SUHU kurang dari 20</strong> maka LED akan mati.
+                                                            </p>
+                                                            <p>
+                                                                Setelah blok selesai di susun maka hal yang selanjutnya dilakukan adalah menekan tombol
+                                                                RUN CODE yang ada pada bagian pojok atas. Jangan lupa di kaitkan dengan blok IoT Development Board.
+                                                            </p>
+                                                            <img src="/blok/run.png" width={300} />
+                                                            <div class="code-block">
+                                                                <p>
+                                                                    Output dari run code tersebut adalah Edu-IoT Board akan merespon perintah block yang disusun oleh user.
+                                                                    Dan akan menghidupkan 1 LED
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="code-block">
+                                                        <h5>Percabangan If Bersarang</h5>
+                                                        <p>
+                                                            Percabangan if bersarang memuat logika seperti pada contoh gambar dibawah
+                                                        </p>
+                                                        <img src="/blok/ifelseif.png" width={300} alt="..." />
+                                                        <div class="code-block">
+                                                            <p>
+                                                                Pada logika diatas memuat 3 blok yaitu <strong>blok logika if else, blok kondisi logika
+                                                                yang melibatkan value suhu dan kelembapan, blok kontrol LED, serta blok kontrol BUZZER</strong> Maksud dari penyusunan
+                                                                blok diatas adalah jika satu kondisi terpenuhi maka kondisi yang lain tidak akan di eksekusi :
+                                                            </p>
+                                                            <p>
+                                                                1. Jika <strong>SUHU kurang lebih dari 20.</strong> di sini sistem akan melihat apakah kondisi ini sudah benar.
+                                                                Jika memang belum benar maka akan lanjut ke kondisi berikutnya
+                                                            </p>
+                                                            <p>
+                                                                2. Jika <strong>KELEMBAPAN kurang lebih dari 120.</strong> di sini sistem akan melihat apakah kondisi ini sudah benar.
+                                                                Jika memang belum benar maka akan lanjut ke kondisi berikutnya yaitu else
+                                                            </p>
+                                                            <p>
+                                                                3. Jika memang 2 kondisi tersebut tidak terpenuhi maka akan lanjut ke bagian else akan dieksekusi
+                                                            </p>
+                                                            <p>
+                                                                Jika Kondisi pertama benar maka 1 LED akan menyala pada perangkat Edu-IoT Board. Sedangkan jika
+                                                                kondisi ke 2 benar maka 2 LED pada perangkat Edu-IoT Board akan hidup. Jika kedua kondisi salah maka
+                                                                BUZZER pada perangkat Edu-IoT Board akan menyala.
+                                                            </p>
+                                                            <p>
+                                                                Setelah blok selesai di susun maka hal yang selanjutnya dilakukan adalah menekan tombol
+                                                                RUN CODE yang ada pada bagian pojok atas. Jangan lupa di kaitkan dengan blok IoT Development Board.
+                                                            </p>
+                                                            <img src="/blok/run2.png" width={300} />
+
+                                                        </div>
+                                                    </div>
+                                                    
+                                                </div>
+
+                                                <div id="perulangan" class="section-block">
+                                                    <h3 class="block-title">Perulangan</h3>
+                                                    <p>
+                                                        Operasi logika perulangan pada website ini mencakup perulangan While, dan Perulangan While.
+                                                    </p>
+                                                    <div class="code-block">
+                                                        <h5>Perulangan For</h5>
+                                                        <p>
+                                                            Percabangan for memuat logika seperti pada contoh gambar dibawah
+                                                        </p>                              
+                                                    </div>
+                                                    <div class="code-block">
+                                                        <h5>Perulangan While</h5>
+                                                        <p>
+                                                            Percabangan while memuat logika seperti pada contoh gambar dibawah
+                                                        </p>
+                                                    </div>
+                                                </div>
+
+                                                <div id="menggunakan-variabel" class="section-block">
+                                                    <h3 class="block-title">Menggunakan Variabel</h3>
+                                                    <p>
+                                                        Operasi logika perulangan pada website ini mencakup perulangan While, dan Perulangan While.
+                                                    </p>
+                                                </div>
+                                                <div id="menggunakan-function" class="section-block">
+                                                    <h3 class="block-title">Menggunakan Function</h3>
+                                                    <p>
+                                                        Operasi logika perulangan pada website ini mencakup perulangan While, dan Perulangan While.
+                                                    </p>
+                                                </div>
+
                                             </section>
                                             <section id="callouts-section" class="doc-section">
                                                 <h2 class="section-title">Callouts</h2>
@@ -314,21 +428,21 @@ export default class start extends Component {
                                                     </li>
                                                 </nav>
                                                 <li class="nav-item">
-                                                    <a class="nav-link scrollto" href="#code-section">Operasi Logika Blockly</a>
+                                                    <a class="nav-link scrollto" href="#operasilogikablockly">Operasi Logika Blockly</a>
                                                 </li>
 
                                                 <nav class="nav doc-sub-menu nav flex-column">
                                                     <li class="nav-item">
-                                                        <a class="nav-link scrollto" href="#html">Percabangan</a>
+                                                        <a class="nav-link scrollto" href="#percabangan">Percabangan</a>
                                                     </li>
                                                     <li class="nav-item">
-                                                        <a class="nav-link scrollto" href="#css">Perulangan</a>
+                                                        <a class="nav-link scrollto" href="#perulangan">Perulangan</a>
                                                     </li>
                                                     <li class="nav-item">
-                                                        <a class="nav-link scrollto" href="#sass">Menggunakan Variabel</a>
+                                                        <a class="nav-link scrollto" href="#menggunakan-variabel">Menggunakan Variabel</a>
                                                     </li>
                                                     <li class="nav-item">
-                                                        <a class="nav-link scrollto" href="#less">Menggunakan Function</a>
+                                                        <a class="nav-link scrollto" href="#menggunakan-function">Menggunakan Function</a>
                                                     </li>
                                                     
                                                 </nav>

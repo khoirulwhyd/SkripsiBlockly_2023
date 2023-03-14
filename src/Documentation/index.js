@@ -46,12 +46,12 @@ export default class index extends Component {
                 <h2 class="title">Getting started is easy!</h2>
                 <div class="intro">
                   <p>Website ini adalah sebuah aplikasi pembelajaran logika pemrograman dasar menggunakan visual programming yaitu Blockly.Anda bisa dengan mudah drag & drop block yang dibutuhkan ketika ingin menyusun sebuah logika. Aplikasi ini disusun dengan tujuan untuk mempermudah belajar logika pemrograman kepada mahasiswa.
-</p>
+                  </p>
                   <div class="cta-container">
                     <a class="btn btn-primary btn-cta" href="/start" target="_blank"><i class="fas fa-book"></i>Lihat Dokumentasi</a>
                   </div>
                 </div>
-                <div id="cards-wrapper" class="cards-wrapper row">
+                {/* <div id="cards-wrapper" class="cards-wrapper row">
                   <div class="item item-green col-lg-4 col-6">
                     <div class="item-inner">
                       <div class="icon-holder">
@@ -59,37 +59,7 @@ export default class index extends Component {
                       </div>
                       <h3 class="title">Quick Start</h3>
                       <p class="intro">Demo example, consectetuer adipiscing elit</p>
-                      <a class="link" href="start.html"><span></span></a>
-                    </div>
-                  </div>
-                  <div class="item item-pink item-2 col-lg-4 col-6">
-                    <div class="item-inner">
-                      <div class="icon-holder">
-                        <span aria-hidden="true" class="icon icon_puzzle_alt"></span>
-                      </div>
-                      <h3 class="title">Components</h3>
-                      <p class="intro">Lorem ipsum dolor sit amet, consectetuer adipiscing elit</p>
-                      <a class="link" href="components.html"><span></span></a>
-                    </div>
-                  </div>
-                  <div class="item item-blue col-lg-4 col-6">
-                    <div class="item-inner">
-                      <div class="icon-holder">
-                        <span aria-hidden="true" class="icon icon_datareport_alt"></span>
-                      </div>
-                      <h3 class="title">Charts</h3>
-                      <p class="intro">Lorem ipsum dolor sit amet, consectetuer adipiscing elit</p>
-                      <a class="link" href="charts.html"><span></span></a>
-                    </div>
-                  </div>
-                  <div class="item item-purple col-lg-4 col-6">
-                    <div class="item-inner">
-                      <div class="icon-holder">
-                        <span aria-hidden="true" class="icon icon_lifesaver"></span>
-                      </div>
-                      <h3 class="title">FAQs</h3>
-                      <p class="intro">Layout for FAQ page. Lorem ipsum dolor sit amet, consectetuer adipiscing elit</p>
-                      <a class="link" href="faqs.html"><span></span></a>
+                      <a class="link" href="/start"><span></span></a>
                     </div>
                   </div>
                   <div class="item item-primary col-lg-4 col-6">
@@ -112,7 +82,7 @@ export default class index extends Component {
                       <a class="link" href="license.html"><span></span></a>
                     </div>
                   </div>
-                </div>
+                </div> */}
               </div>
             </section>
             <footer class="footer text-center">

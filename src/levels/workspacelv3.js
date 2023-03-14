@@ -98,6 +98,10 @@ export default function Workspace() {
                         kind: "block",
                         type: "math_arithmetic",
                     },
+                    {
+                        kind: "block",
+                        type: "controls_flow_statements",
+                    }
                 ],
             },
             // kategori blok aktuator
@@ -160,6 +164,21 @@ export default function Workspace() {
                         kind: "block",
                         type: "aktuator_buzzer_off",
                     },
+                ],
+            },
+            {
+                kind: "category",
+                name: "Text Print",
+                colour: "#5BA58C",
+                contents: [
+                    {
+                        "kind": "block",
+                        "type": "text_print",
+                    },
+                    {
+                        "kind": "block",
+                        "type": "text",
+                    }
                 ],
             },
             {

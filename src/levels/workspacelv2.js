@@ -138,6 +138,21 @@ export default function Workspace() {
             },
             {
                 kind: "category",
+                name: "Text Print",
+                colour: "#5BA58C",
+                contents: [
+                    {
+                        "kind": "block",
+                        "type": "text_print",
+                    },
+                    {
+                        "kind": "block",
+                        "type": "text",
+                    }
+                ],
+            },
+            {
+                kind: "category",
                 name: "Timer",
                 colour: "#A55B80",
                 contents: [

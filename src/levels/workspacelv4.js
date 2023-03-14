@@ -65,6 +65,14 @@ export default function Workspace() {
                         kind: "block",
                         type: "math_number",
                     },
+                    {
+                        kind: "block",
+                        type: "sensor",
+                    },
+                    {
+                        kind: "block",
+                        type: "variables_gets",
+                    },
                 ],
             },
             // kategori blok looping
@@ -166,6 +174,21 @@ export default function Workspace() {
                         kind: "block",
                         type: "set_timer",
                     },
+                ],
+            },
+            {
+                kind: "category",
+                name: "Text Print",
+                colour: "#5BA58C",
+                contents: [
+                    {
+                        "kind": "block",
+                        "type": "text_print",
+                    },
+                    {
+                        "kind": "block",
+                        "type": "text",
+                    }
                 ],
             },
             // kategori blok function

@@ -1,11 +1,13 @@
 import React, { Component } from 'react'
 import "../style/styles.css";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPuzzlePiece } from '@fortawesome/free-solid-svg-icons'
 
 export default class introduction extends Component {
   render() {
     return (
       <div>
-            <body class="body-green">
+            <body class="body-blue">
                 <div class="page-wrapper">
                     <header id="header" class="header">
                         <div class="container">
@@ -21,18 +23,18 @@ export default class introduction extends Component {
                                 <li class="breadcrumb-item"><a href="/index">Home</a></li>
                                 <li class="breadcrumb-item active">Introduction</li>
                             </ol>
-                            <div class="top-search-box">
+                            {/* <div class="top-search-box">
                                 <form class="form-inline search-form justify-content-center" action="" method="get">
                                     <input type="text" placeholder="Search..." name="search" class="form-control search-input"></input>
                                     <button type="submit" class="btn search-btn" value="Search"><i class="fas fa-search"></i></button>
                                 </form>
-                            </div>
+                            </div> */}
                         </div>
                     </header>
                     <div class="doc-wrapper">
                         <div class="container">
                             <div id="doc-header" class="doc-header text-center">
-                                <h1 class="doc-title"><i class="icon fa fa-paper-plane"></i><strong>Introduction</strong></h1>
+                                <h1 class="doc-title"><FontAwesomeIcon icon={faPuzzlePiece} />Introduction</h1>
                                 <div class="meta"><i class="far fa-clock"></i> Last updated: June 13th, 2022</div>
                             </div>
                             <div class="doc-body row">
@@ -188,7 +190,7 @@ export default class introduction extends Component {
                                                     </p>
                                                     <div class="code-block">
                                                         <h6>Perulangan For</h6>
-                                                        <img src="/blok/forloop.png" width={200} alt="..." />
+                                                        <img src="/blok/forloop.png" width={300} alt="..." />
                                                     </div>
                                                     <div class="code-block">
                                                         <h6>Perulangan While</h6>

@@ -4,7 +4,7 @@ export default class varBlock extends Component {
   render() {
     return (
       <div>
-            <body class="body-green">
+            <body class="body-blue">
                 <div class="page-wrapper">
                     <header id="header" class="header">
                         <div class="container">
@@ -215,11 +215,11 @@ export default class varBlock extends Component {
                                                 </p>
                                                 <div class="code-block">
                                                     <h6>Perulangan For</h6>
-                                                    <img src="/blok/forloop.png" width={150} alt="..." />
+                                                    <img src="/blok/forloop.png" width={300} alt="..." />
                                                 </div>
                                                 <div class="code-block">
                                                     <h6>Perulangan While</h6>
-                                                    <img src="/blok/whileloop.png" width={150} alt="..." />
+                                                    <img src="/blok/whileloop.png" width={200} alt="..." />
                                                 </div>
                                             </div>
                                             <div id="blokfunction" class="section-block">
@@ -253,7 +253,7 @@ export default class varBlock extends Component {
                                                     <p>
                                                         Percabangan if memuat susunan blok seperti pada contoh gambar dibawah
                                                     </p>
-                                                    <img src="/blok/percabangan-if.png" width={200} alt="..." />
+                                                    <img src="/blok/percabangan-if.png" width={300} alt="..." />
                                                     <div class="code-block">
                                                         <p>
                                                             Pada logika diatas memuat 3 blok yaitu <strong>blok logika if, blok kondisi logika lebih dari
@@ -268,7 +268,7 @@ export default class varBlock extends Component {
                                                             RUN CODE yang ada pada bagian pojok atas. Jangan lupa di sambungkan blok logika yang telah disusun
                                                             dengan blok IoT Development Board.
                                                         </p>
-                                                        <img src="/blok/RUN22.png" width={300} />
+                                                        <img src="/blok/RUN22.png" width={400} />
                                                         <div class="code-block">
                                                             <p>
                                                                 Output dari run code tersebut adalah Edu-IoT Board akan merespon perintah penyusunan blok
@@ -282,7 +282,7 @@ export default class varBlock extends Component {
                                                     <p>
                                                         Percabangan if memuat susunan blok seperti pada contoh gambar dibawah
                                                     </p>
-                                                    <img src="/blok/if.png" width={200} alt="..." />
+                                                    <img src="/blok/if.png" width={300} alt="..." />
                                                     <div class="code-block">
                                                         <p>
                                                             Pada logika diatas memuat 3 blok yaitu <strong>blok logika if else, blok kondisi logika

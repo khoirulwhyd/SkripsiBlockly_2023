@@ -1,10 +1,12 @@
 import React, { Component } from 'react'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPuzzlePiece } from '@fortawesome/free-solid-svg-icons'
 
 export default class start extends Component {
     render() {
         return (
             <div>
-                <body class="body-green">
+                <body class="body-blue">
                     <div class="page-wrapper">
                         <header id="header" class="header">
                             <div class="container">
@@ -20,19 +22,18 @@ export default class start extends Component {
                                     <li class="breadcrumb-item"><a href="/index">Home</a></li>
                                     <li class="breadcrumb-item active">Documentation</li>
                                 </ol>
-                                <div class="top-search-box">
+                                {/* <div class="top-search-box">
                                     <form class="form-inline search-form justify-content-center" action="" method="get">
                                         <input type="text" placeholder="Search..." name="search" class="form-control search-input"></input>
                                         <button type="submit" class="btn search-btn" value="Search"><i class="fas fa-search"></i></button>
                                     </form>
-                                </div>
+                                </div> */}
                             </div>
                         </header>
                         <div class="doc-wrapper">
                             <div class="container">
                                 <div id="doc-header" class="doc-header text-center">
-                                    <h1 class="doc-title"><i class="icon fa fa-paper-plane"></i> All Documentation</h1>
-                                    <div class="meta"><i class="far fa-clock"></i> Last updated: June 13th, 2022</div>
+                                    <h1 class="doc-title"><FontAwesomeIcon icon={faPuzzlePiece} class="icon fa" /> Documentation</h1>
                                 </div>
                                 <div class="doc-body row">
                                     <div class="doc-content col-md-9 col-12 order-1">
@@ -229,11 +230,11 @@ export default class start extends Component {
                                                     </p>
                                                     <div class="code-block">
                                                         <h6>Perulangan For</h6>
-                                                        <img src="/blok/forloop.png" width={150} alt="..." />
+                                                        <img src="/blok/forloop.png" width={300} alt="..." />
                                                     </div>
                                                     <div class="code-block">
                                                         <h6>Perulangan While</h6>
-                                                        <img src="/blok/whileloop.png" width={150} alt="..." />
+                                                        <img src="/blok/whileloop.png" width={200} alt="..." />
                                                     </div>
                                                 </div>
                                                 <div id="blokfunction" class="section-block">
@@ -262,12 +263,12 @@ export default class start extends Component {
                                                     <p> Operasi logika percabangan pada website ini mencakup percabangan if, dan bercabangan
                                                         if bersarang.
                                                     </p>
-                                                    <div class="code-block">
+                                                    <div id="percabanganif" class="code-block">
                                                         <h5>1. Percabangan If</h5>
                                                         <p>
                                                             Percabangan if memuat susunan blok seperti pada contoh gambar dibawah
                                                         </p>
-                                                        <img src="/blok/percabangan-if.png" width={200} alt="..." />
+                                                        <img src="/blok/percabangan-if.png" width={300} alt="..." />
                                                         <div class="code-block">
                                                             <p>
                                                                 Pada logika diatas memuat 3 blok yaitu <strong>blok logika if, blok kondisi logika lebih dari
@@ -291,12 +292,12 @@ export default class start extends Component {
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <div class="code-block">
+                                                    <div id="percabanganifelse" class="code-block">
                                                         <h5>2. Percabangan If Else</h5>
                                                         <p>
                                                             Percabangan if memuat susunan blok seperti pada contoh gambar dibawah
                                                         </p>
-                                                        <img src="/blok/if.png" width={200} alt="..." />
+                                                        <img src="/blok/if.png" width={300} alt="..." />
                                                         <div class="code-block">
                                                             <p>
                                                                 Pada logika diatas memuat 3 blok yaitu <strong>blok logika if else, blok kondisi logika
@@ -322,7 +323,7 @@ export default class start extends Component {
                                                         </div>
                                                     </div>
 
-                                                    <div class="code-block">
+                                                    <div id="percabanganifelseif" class="code-block">
                                                         <h5>3. Percabangan If ElseIf Else</h5>
                                                         <p>
                                                             Percabangan if bersarang memuat susunan blok seperti pada contoh gambar dibawah
@@ -366,7 +367,7 @@ export default class start extends Component {
                                                     <p>
                                                         Operasi logika perulangan pada website ini mencakup perulangan While, dan Perulangan While.
                                                     </p>
-                                                    <div class="code-block">
+                                                    <div id="perulanganfor" class="code-block">
                                                         <h5>Perulangan For</h5>
                                                         <p>
                                                             Percabangan for memuat logika seperti pada contoh gambar dibawah
@@ -392,7 +393,7 @@ export default class start extends Component {
                                                             </p>
                                                         </div>               
                                                     </div>
-                                                    <div class="code-block">
+                                                    <div id="perulanganwhile" class="code-block">
                                                         <h5>Perulangan While</h5>
                                                         <p>
                                                             Percabangan while memuat logika seperti pada contoh gambar dibawah
@@ -476,38 +477,9 @@ export default class start extends Component {
                                                                 </p>
                                                             </div>
                                                         </div>
-                                                        
                                                     </p>
-                                                    
                                                 </div>
                                             </section>
-                                            {/* <section id="callouts-section" class="doc-section">
-                                                <h2 class="section-title">Callouts</h2>
-                                                <div class="section-block">
-                                                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.
-                                                    </p>
-                                                </div>
-                                                <div class="section-block">
-                                                    <div class="callout-block callout-info">
-                                                        <div class="icon-holder">
-                                                            <i class="fas fa-info-circle"></i>
-                                                        </div>
-                                                        <div class="content">
-                                                            <h4 class="callout-title">Aenean imperdiet</h4>
-                                                            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium <code>&lt;code&gt;</code> , Nemo enim ipsam voluptatem quia voluptas <a href="#">link example</a> sit aspernatur aut odit aut fugit.</p>
-                                                        </div>
-                                                    </div>
-                                                    <div class="callout-block callout-warning">
-                                                        <div class="icon-holder">
-                                                            <i class="fas fa-bug"></i>
-                                                        </div>
-                                                        <div class="content">
-                                                            <h4 class="callout-title">Morbi posuere</h4>
-                                                            <p>Nunc hendrerit odio quis dignissim efficitur. Proin ut finibus libero. Morbi posuere fringilla felis eget sagittis. Fusce sem orci, cursus in tortor <a href="#">link example</a> tellus vel diam viverra elementum.</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </section> */}
                                         </div>
                                     </div>
 
@@ -553,22 +525,37 @@ export default class start extends Component {
                                                         <a class="nav-link scrollto" href="#blokfunction">Blok Function</a>
                                                     </li>
                                                 </nav>
-                                                <li class="nav-item">
+                                                {/* <li class="nav-item">
                                                     <a class="nav-link scrollto" href="#operasilogikablockly">Operasi Logika Blockly</a>
-                                                </li>
+                                                </li> */}
 
                                                 <nav class="nav doc-sub-menu nav flex-column">
                                                     <li class="nav-item">
-                                                        <a class="nav-link scrollto" href="#percabangan">Percabangan</a>
+                                                        <a class="nav-link scrollto" href="#percabangan">Blok Percabangan</a>
                                                     </li>
                                                     <li class="nav-item">
-                                                        <a class="nav-link scrollto" href="#perulangan">Perulangan</a>
+                                                        <a class="nav-link scrollto" href="#percabanganif">Blok Percabangan If</a>
                                                     </li>
                                                     <li class="nav-item">
-                                                        <a class="nav-link scrollto" href="#menggunakan-variabel">Menggunakan Variabel</a>
+                                                        <a class="nav-link scrollto" href="#percabanganifelse">Blok Percabangan If Else</a>
                                                     </li>
                                                     <li class="nav-item">
-                                                        <a class="nav-link scrollto" href="#menggunakan-function">Menggunakan Function</a>
+                                                        <a class="nav-link scrollto" href="#percabanganifelseif">Blok Percabangan If ElseIf Else</a>
+                                                    </li>
+                                                    <li class="nav-item">
+                                                        <a class="nav-link scrollto" href="#perulangan">Blok Perulangan</a>
+                                                    </li>
+                                                    <li class="nav-item">
+                                                        <a class="nav-link scrollto" href="#perulanganfor">Blok Perulangan For</a>
+                                                    </li>
+                                                    <li class="nav-item">
+                                                        <a class="nav-link scrollto" href="#perulanganwhile">Blok Perulangan While</a>
+                                                    </li>
+                                                    <li class="nav-item">
+                                                        <a class="nav-link scrollto" href="#menggunakan-variabel">Blok Menggunakan Variabel</a>
+                                                    </li>
+                                                    <li class="nav-item">
+                                                        <a class="nav-link scrollto" href="#menggunakan-function">Blok Menggunakan Function</a>
                                                     </li>
                                                 </nav>
                                                 {/* <li class="nav-item">

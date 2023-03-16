@@ -1,4 +1,6 @@
 import React, { Component } from 'react'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPuzzlePiece } from '@fortawesome/free-solid-svg-icons'
 
 export default class index extends Component {
   render() {
@@ -19,16 +21,16 @@ export default class index extends Component {
                   </h1>
                 </div>
                 <div class="tagline">
-                  <p>Simple apps for learning coding</p>
+                  <p>Aplikasi Sederhana Untuk Belajar Logika Pemrograman Dasar Pada Edu-IoT Board</p>
                   {/* <p>Aplikasi Pembelajaran Logika Pemrograman Dasar Pada Edu-IoT Board</p> */}
                 </div>
 
-                <div class="main-search-box pt-3 pb-4 d-inline-block">
+                {/* <div class="main-search-box pt-3 pb-4 d-inline-block">
                   <form class="form-inline search-form justify-content-center" action="" method="get">
                     <input type="text" placeholder="Enter search terms..." name="search" class="form-control search-input"></input>
                     <button type="submit" class="btn search-btn" value="Search"><i class="fas fa-search"></i></button>
                   </form>
-                </div>
+                </div> */}
                 <div class="social-container">
                 </div>
               </div>
@@ -47,7 +49,8 @@ export default class index extends Component {
                   <div class="item item-green col-lg-4 col-6">
                     <div class="item-inner">
                       <div class="icon-holder">
-                        <i class="icon fa fa-paper-plane"></i>
+                        <FontAwesomeIcon icon={faPuzzlePiece} class="icon fa" />
+                        {/* <i class="icon fa fa-paper-plane"></i> */}
                       </div>
                       <h3 class="title">Introduction</h3>
                       <p class="intro">Perkenalan Mengenai Aplikasi</p>
@@ -57,7 +60,8 @@ export default class index extends Component {
                   <div class="item item-primary col-lg-4 col-6">
                     <div class="item-inner">
                       <div class="icon-holder">
-                        <span aria-hidden="true" class="icon icon_genius"></span>
+                        <FontAwesomeIcon icon={faPuzzlePiece} class="icon fa" />
+                        {/* <span aria-hidden="true" class="icon icon_genius"></span> */}
                       </div>
                       <h3 class="title">Variasi Blok</h3>
                       <p class="intro">Macam-macam blok yang ada</p>
@@ -67,7 +71,8 @@ export default class index extends Component {
                   <div class="item item-orange col-lg-4 col-6">
                     <div class="item-inner">
                       <div class="icon-holder">
-                        <span aria-hidden="true" class="icon icon_gift"></span>
+                        <FontAwesomeIcon icon={faPuzzlePiece} class="icon fa" />
+                        {/* <span aria-hidden="true" class="icon icon_gift"></span> */}
                       </div>
                       <h3 class="title">Operasi Logika Blockly</h3>
                       <p class="intro">Dasar dan cara melakukan operasi logika pada aplikasi</p>
@@ -79,7 +84,7 @@ export default class index extends Component {
             </section>
             <footer class="footer text-center">
               <div class="container">
-                <small class="copyright">Designed with <span class="sr-only">love</span><i class="fas fa-heart"></i> by <a href="https://themes.3rdwavemedia.com/" target="_blank">Xiaoying Riley</a> for developers</small>
+                <small class="copyright">Designed with by JTI Polinema</small>
               </div>
             </footer>
           </div>

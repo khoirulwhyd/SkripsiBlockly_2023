@@ -4,7 +4,7 @@ export default class operasiLogikaBlockly extends Component {
   render() {
     return (
       <div>
-            <body class="body-green">
+            <body class="body-blue">
                 <div class="page-wrapper">
                     <header id="header" class="header">
                         <div class="container">

@@ -4,6 +4,7 @@
 
 import "../App.css";
 import "../customBlocks/custom_Blocks";
+import "../style/home.css"
 
 import { Link } from 'react-router-dom';
 import React, { useEffect, useState } from "react";
@@ -352,7 +353,7 @@ export default function Workspace() {
                     >
                         {/* start levels */}
                         <div>
-                            <p className="level text-white">Level Pembelajaran</p>
+                            <p class="level text-white">Level Pembelajaran</p>
                             <nav aria-label="Page navigation example">
                                 <ul class="pagination levels gap-1">
                                     <Link to="/workspace1">

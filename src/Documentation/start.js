@@ -18,7 +18,7 @@ export default class start extends Component {
                                 </div>
                                 <ol class="breadcrumb">
                                     <li class="breadcrumb-item"><a href="/index">Home</a></li>
-                                    <li class="breadcrumb-item active">Quick Start</li>
+                                    <li class="breadcrumb-item active">Documentation</li>
                                 </ol>
                                 <div class="top-search-box">
                                     <form class="form-inline search-form justify-content-center" action="" method="get">
@@ -31,7 +31,7 @@ export default class start extends Component {
                         <div class="doc-wrapper">
                             <div class="container">
                                 <div id="doc-header" class="doc-header text-center">
-                                    <h1 class="doc-title"><i class="icon fa fa-paper-plane"></i> Quick Start</h1>
+                                    <h1 class="doc-title"><i class="icon fa fa-paper-plane"></i> All Documentation</h1>
                                     <div class="meta"><i class="far fa-clock"></i> Last updated: June 13th, 2022</div>
                                 </div>
                                 <div class="doc-body row">

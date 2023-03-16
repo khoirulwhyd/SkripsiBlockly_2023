@@ -30,14 +30,6 @@ export default class index extends Component {
                   </form>
                 </div>
                 <div class="social-container">
-                  <div class="github-btn mb-2">
-                    <a class="github-button" href="https://github.com/xriley/PrettyDocs-Theme" data-size="large" aria-label="Star xriley/PrettyDocs-Theme on GitHub">Star</a>
-                    <a class="github-button" href="https://github.com/xriley" data-size="large" aria-label="Follow @xriley on GitHub">Follow @xriley</a>
-                  </div>
-                  <div class="twitter-tweet">
-                    <a href="https://twitter.com/3rdwave_themes?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false">Follow @3rdwave_themes</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-                  </div>
-                  <div class="fb-like" data-href="https://themes.3rdwavemedia.com/" data-width="" data-layout="button_count" data-action="like" data-size="small" data-share="true"></div>
                 </div>
               </div>
             </header>
@@ -48,18 +40,18 @@ export default class index extends Component {
                   <p>Website ini adalah sebuah aplikasi pembelajaran logika pemrograman dasar menggunakan visual programming yaitu Blockly.Anda bisa dengan mudah drag & drop block yang dibutuhkan ketika ingin menyusun sebuah logika. Aplikasi ini disusun dengan tujuan untuk mempermudah belajar logika pemrograman kepada mahasiswa.
                   </p>
                   <div class="cta-container">
-                    <a class="btn btn-primary btn-cta" href="/start" target="_blank"><i class="fas fa-book"></i>Lihat Dokumentasi</a>
+                    <a class="btn btn-primary btn-cta" href="/start" target="_blank"><i class="fas fa-book"></i>Lihat Semua Dokumentasi</a>
                   </div>
                 </div>
-                {/* <div id="cards-wrapper" class="cards-wrapper row">
+                <div id="cards-wrapper" class="cards-wrapper row">
                   <div class="item item-green col-lg-4 col-6">
                     <div class="item-inner">
                       <div class="icon-holder">
                         <i class="icon fa fa-paper-plane"></i>
                       </div>
-                      <h3 class="title">Quick Start</h3>
-                      <p class="intro">Demo example, consectetuer adipiscing elit</p>
-                      <a class="link" href="/start"><span></span></a>
+                      <h3 class="title">Introduction</h3>
+                      <p class="intro">Perkenalan Mengenai Aplikasi</p>
+                      <a class="link" href="/introduction"><span></span></a>
                     </div>
                   </div>
                   <div class="item item-primary col-lg-4 col-6">
@@ -67,9 +59,9 @@ export default class index extends Component {
                       <div class="icon-holder">
                         <span aria-hidden="true" class="icon icon_genius"></span>
                       </div>
-                      <h3 class="title">Showcase</h3>
-                      <p class="intro">Layout for showcase page. Lorem ipsum dolor sit amet, consectetuer adipiscing elit </p>
-                      <a class="link" href="showcase.html"><span></span></a>
+                      <h3 class="title">Variasi Blok</h3>
+                      <p class="intro">Macam-macam blok yang ada</p>
+                      <a class="link" href="/variasiblok"><span></span></a>
                     </div>
                   </div>
                   <div class="item item-orange col-lg-4 col-6">
@@ -77,12 +69,12 @@ export default class index extends Component {
                       <div class="icon-holder">
                         <span aria-hidden="true" class="icon icon_gift"></span>
                       </div>
-                      <h3 class="title">License &amp; Credits</h3>
-                      <p class="intro">Layout for license &amp; credits page. Consectetuer adipiscing elit.</p>
-                      <a class="link" href="license.html"><span></span></a>
+                      <h3 class="title">Operasi Logika Blockly</h3>
+                      <p class="intro">Dasar dan cara melakukan operasi logika pada aplikasi</p>
+                      <a class="link" href="/operasilogika"><span></span></a>
                     </div>
                   </div>
-                </div> */}
+                </div>
               </div>
             </section>
             <footer class="footer text-center">

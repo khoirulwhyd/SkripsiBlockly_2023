@@ -15,7 +15,9 @@ import Pubsub from "./testRabbit/Pubsub.js";
 // documentationpage import
 import Index from "./Documentation/index";
 import Start from "./Documentation/start";
-
+import VariasiBlock from "./Documentation/varBlock";
+import Introduction from "./Documentation/introduction";
+import OpLogika from "./Documentation/operasiLogikaBlockly";
 
 export default function App() {
   return (
@@ -30,7 +32,9 @@ export default function App() {
             <Route path='/workspace4' element={<Workspacelv4 />} />
             <Route path='/index' element={<Index />} />
             <Route path='/start' element={<Start />} />
-
+            <Route path='/variasiblok' element={<VariasiBlock />} />
+            <Route path='/introduction' element={<Introduction />} />
+            <Route path='/operasilogika' element={<OpLogika />} />
 
           {/* <Route path='/homepage' element={<Homepage />} /> */}
           <Route path='/pubsub' element={<Pubsub />} />

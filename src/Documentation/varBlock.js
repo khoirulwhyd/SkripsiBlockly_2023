@@ -1,5 +1,9 @@
 import React, { Component } from 'react'
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faSearch } from '@fortawesome/free-solid-svg-icons'
+import { faPuzzlePiece } from '@fortawesome/free-solid-svg-icons'
+
 export default class varBlock extends Component {
   render() {
     return (
@@ -20,18 +24,27 @@ export default class varBlock extends Component {
                                 <li class="breadcrumb-item"><a href="/index">Home</a></li>
                                 <li class="breadcrumb-item active">Variasi Block</li>
                             </ol>
-                            <div class="top-search-box">
+                            {/* <div class="top-search-box">
                                 <form class="form-inline search-form justify-content-center" action="" method="get">
                                     <input type="text" placeholder="Search..." name="search" class="form-control search-input"></input>
                                     <button type="submit" class="btn search-btn" value="Search"><i class="fas fa-search"></i></button>
                                 </form>
-                            </div>
+                            </div> */}
+                            {/* <div class="top-search-box">
+                                <form class="form-inline search-form justify-content-center" action="" method="get">
+                                    <input type="text" placeholder="Search..." name="search" class="form-control search-input"></input>
+                                    <button type="submit" class="btn search-btn" value="Search">
+                                        <FontAwesomeIcon icon={faSearch} />
+                                    </button>
+                                </form>
+                            </div> */}
+                            
                         </div>
                     </header>
                     <div class="doc-wrapper">
                         <div class="container">
                             <div id="doc-header" class="doc-header text-center">
-                                <h1 class="doc-title"><i class="icon fa fa-paper-plane"></i> Variasi Block</h1>
+                                <h1 class="doc-title"><FontAwesomeIcon icon={faPuzzlePiece} class="icon fa" /> Variasi Block</h1>
                                 <div class="meta"><i class="far fa-clock"></i> Last updated: June 13th, 2022</div>
                             </div>
                             <div class="doc-body row">

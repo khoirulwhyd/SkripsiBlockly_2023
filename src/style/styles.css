@@ -9,6 +9,10 @@ body {
     -moz-osx-font-smoothing: grayscale
 }
 
+.text-normal {
+    font-weight: 400;
+}
+
 html,
 body {
     height: 100%

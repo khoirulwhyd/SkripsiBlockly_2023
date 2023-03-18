@@ -24,6 +24,7 @@ export default class index extends Component {
                   <p>Aplikasi Sederhana Untuk Belajar Logika Pemrograman Dasar Pada Edu-IoT Board</p>
                   {/* <p>Aplikasi Pembelajaran Logika Pemrograman Dasar Pada Edu-IoT Board</p> */}
                 </div>
+                
 
                 {/* <div class="main-search-box pt-3 pb-4 d-inline-block">
                   <form class="form-inline search-form justify-content-center" action="" method="get">
@@ -39,7 +40,12 @@ export default class index extends Component {
               <div class="container">
                 <h2 class="title">Getting started is easy!</h2>
                 <div class="intro">
-                  <p>Website ini adalah sebuah aplikasi pembelajaran logika pemrograman dasar menggunakan visual programming yaitu Blockly.Anda bisa dengan mudah drag & drop block yang dibutuhkan ketika ingin menyusun sebuah logika. Aplikasi ini disusun dengan tujuan untuk mempermudah belajar logika pemrograman kepada mahasiswa.
+                  <p class="text-normal">
+                    Website ini adalah sebuah aplikasi pembelajaran logika pemrograman 
+                    dasar menggunakan visual programming yaitu Blockly.Anda bisa dengan 
+                    mudah drag & drop block yang dibutuhkan ketika ingin menyusun sebuah 
+                    logika. Aplikasi ini disusun dengan tujuan untuk mempermudah belajar 
+                    logika pemrograman kepada mahasiswa.
                   </p>
                   <div class="cta-container">
                     <a class="btn btn-primary btn-cta" href="/start" target="_blank"><i class="fas fa-book"></i>Lihat Semua Dokumentasi</a>
@@ -53,7 +59,7 @@ export default class index extends Component {
                         {/* <i class="icon fa fa-paper-plane"></i> */}
                       </div>
                       <h3 class="title">Introduction</h3>
-                      <p class="intro">Perkenalan Mengenai Aplikasi</p>
+                      <p class="intro">Perkenalan Mengenai Aplikasi dan Fiturnya</p>
                       <a class="link" href="/introduction"><span></span></a>
                     </div>
                   </div>

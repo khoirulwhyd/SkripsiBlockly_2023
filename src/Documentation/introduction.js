@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import "../style/styles.css";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPuzzlePiece } from '@fortawesome/free-solid-svg-icons'
+import { faSearch } from '@fortawesome/free-solid-svg-icons'
 
 export default class introduction extends Component {
   render() {
@@ -25,8 +26,10 @@ export default class introduction extends Component {
                             </ol>
                             {/* <div class="top-search-box">
                                 <form class="form-inline search-form justify-content-center" action="" method="get">
-                                    <input type="text" placeholder="Search..." name="search" class="form-control search-input"></input>
-                                    <button type="submit" class="btn search-btn" value="Search"><i class="fas fa-search"></i></button>
+                                    <input type="text" id="introSearch" onkeyup="myFunction()" placeholder="Search..." name="search" class="form-control search-input"></input>
+                                    <button type="submit" class="btn search-btn" value="Search">
+                                        <FontAwesomeIcon icon={faSearch} />
+                                    </button>
                                 </form>
                             </div> */}
                         </div>
@@ -246,6 +249,7 @@ export default class introduction extends Component {
                 </div>
             </body>
       </div>
+      
     )
   }
 }

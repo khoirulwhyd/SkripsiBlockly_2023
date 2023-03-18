@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPuzzlePiece } from '@fortawesome/free-solid-svg-icons'
+import { faSearch } from '@fortawesome/free-solid-svg-icons'
 
 export default class start extends Component {
     render() {
@@ -28,6 +29,15 @@ export default class start extends Component {
                                         <button type="submit" class="btn search-btn" value="Search"><i class="fas fa-search"></i></button>
                                     </form>
                                 </div> */}
+                                {/* <div class="top-search-box">
+                                    <form class="form-inline search-form justify-content-center" action="#" method="">
+                                        <input type="text" placeholder="Search..." name="search" class="form-control search-input" id="searchBar"></input>
+                                        <button type="submit" class="btn search-btn" value="Search">
+                                            <FontAwesomeIcon icon={faSearch} />
+                                        </button>
+                                    </form>
+                                </div>
+                                <script src="searchBar.js"></script> */}
                             </div>
                         </header>
                         <div class="doc-wrapper">

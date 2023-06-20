@@ -19,27 +19,35 @@ import VariasiBlock from "./Documentation/varBlock";
 import Introduction from "./Documentation/introduction";
 import OpLogika from "./Documentation/operasiLogikaBlockly";
 
+// konfigurasi page
+// import Konfigurasi from "./conf/indexConf";
+// import VideoCar from "./Documentation/VideoCarousell";
+
 export default function App() {
   return (
     <>
       <BrowserRouter>
         <Routes>
-          <Route path='/home' element={<Homepage />} />
+          <Route path='/' element={<Index />} />
           <Route path='/workspace' element={<Workspace />} />
-            <Route path='/workspace1' element={<Workspacelv1 />} />
-            <Route path='/workspace2' element={<Workspacelv2 />} />
-            <Route path='/workspace3' element={<Workspacelv3 />} />
-            <Route path='/workspace4' element={<Workspacelv4 />} />
-            <Route path='/index' element={<Index />} />
-            <Route path='/start' element={<Start />} />
-            <Route path='/variasiblok' element={<VariasiBlock />} />
-            <Route path='/introduction' element={<Introduction />} />
-            <Route path='/operasilogika' element={<OpLogika />} />
+          <Route path='/workspace1' element={<Workspacelv1 />} />
+          <Route path='/workspace2' element={<Workspacelv2 />} />
+          <Route path='/workspace3' element={<Workspacelv3 />} />
+          <Route path='/workspace4' element={<Workspacelv4 />} />
+          <Route path='/index' element={<Index />} />
+          <Route path='/start' element={<Start />} />
+          <Route path='/variasiblok' element={<VariasiBlock />} />
+          <Route path='/introduction' element={<Introduction />} />
+          <Route path='/operasilogika' element={<OpLogika />} />
+          {/* <Route path='/config' element={<Konfigurasi />} /> */}
+          {/* <Route path='/vid' element={<VideoCar />} /> */}
 
           {/* <Route path='/homepage' element={<Homepage />} /> */}
           <Route path='/pubsub' element={<Pubsub />} />
 
           <Route path='*' element={<Navigate to='/home' replace />} />
+
+          <Route path='/homepage' element={<Homepage />} />
         </Routes>
       </BrowserRouter>
     </>

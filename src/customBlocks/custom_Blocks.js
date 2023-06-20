@@ -1,7 +1,6 @@
 import Blockly from "blockly";
 import "blockly/python";
-import "webduino-blockly";
-require('webduino-blockly');
+
 
 Blockly.Blocks["new_boundary_function"] = {
   init: function () {

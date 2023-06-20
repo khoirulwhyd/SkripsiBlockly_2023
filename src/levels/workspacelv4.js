@@ -16,13 +16,33 @@ import { faHandHoldingDroplet } from '@fortawesome/free-solid-svg-icons';
 import { faSun } from '@fortawesome/free-solid-svg-icons';
 import { faRoad } from '@fortawesome/free-solid-svg-icons';
 
+//generate clientID with random string
+const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+function generateString(length) {
+    let result = ' ';
+    const charactersLength = characters.length;
+    for (let i = 0; i < length; i++) {
+        result += characters.charAt(Math.floor(Math.random() * charactersLength));
+    }
+    return result;
+}
+
+//data mqtt
+// const dataMqtt = {
+//     host: "192.168.1.102",
+//     clientId: generateString(5),
+//     port: 1884,
+//     // port: 15672, // untuk port emqx: 8083, mosquitto: 8081/8080, hivemq: 8000
+//     username: "vedc",
+//     password: "vedc",
+// };
 const dataMqtt = {
-    host: "broker.hivemq.com",
-    clientId: "KhoirulSkripsi2023",
+    host: "mqtt-dashboard.com",
+    clientId: generateString(5),
     port: 8000,
     // port: 15672, // untuk port emqx: 8083, mosquitto: 8081/8080, hivemq: 8000
-    username: "guest",
-    password: "guest",
+    username: "irul",
+    password: "irul",
 };
 // const dataMqtt = {
 //   host: "168.138.182.140",
@@ -165,14 +185,43 @@ export default function Workspace() {
                     },
                 ],
             },
+
             {
                 kind: "category",
-                name: "Timer",
-                colour: "#A55B80",
+                name: "Kontrol Relay",
+                colour: "#5BA58C",
                 contents: [
                     {
                         kind: "block",
-                        type: "set_timer",
+                        type: "iot_devboard",
+                    },
+                    {
+                        kind: "block",
+                        type: "aktuator_relay",
+                    },
+                ],
+            },
+
+            {
+                kind: "category",
+                name: "Timer With LED",
+                colour: "#A55B80",
+                contents: [
+                    // {
+                    //     kind: "block",
+                    //     type: "set_timer",
+                    // },
+                    {
+                        kind: "block",
+                        type: "aktuator_led_delay_1s",
+                    },
+                    {
+                        kind: "block",
+                        type: "aktuator_led_delay_3s",
+                    },
+                    {
+                        kind: "block",
+                        type: "aktuator_led_delay_5s",
                     },
                 ],
             },
@@ -218,7 +267,7 @@ export default function Workspace() {
                 colour: "#a55b80",
                 custom: "VARIABLE",
             },
-            
+
         ],
     };
 
@@ -256,7 +305,7 @@ export default function Workspace() {
     const mqttConnect = () => {
         const { host, clientId, port, username, password } = dataMqtt;
         // const url = `ws://${host}:${port}/ws`;
-        const url = `ws://${host}:${port}/mqtt`;    
+        const url = `ws://${host}:${port}/mqtt`;
         const options = {
             keepalive: 30,
             protocolId: "MQTT",
@@ -349,7 +398,7 @@ export default function Workspace() {
     return (
         <>
             <Toaster />
-            <div style={{ backgroundColor: "#2E6ECD", padding: "2%" }}>
+            <div style={{ backgroundColor: "#471D8C", padding: "2%" }}>
                 <div
                     style={{
                         display: "flex",
@@ -450,7 +499,8 @@ export default function Workspace() {
                         <BlocklyWorkspace
                             toolboxConfiguration={toolboxCategories}
                             initialXml={initialXml}
-                            className='fill-height'
+                            // className='fill-height'
+                            className='blocklyDiv'
                             workspaceConfiguration={{
                                 grid: {
                                     spacing: 20,

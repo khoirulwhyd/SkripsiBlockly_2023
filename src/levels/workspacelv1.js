@@ -2,6 +2,7 @@
 // import "./customBlocks/custom_Blocks";
 // import "./customBlocks/looping_Blocks";
 
+import "./styles.css";
 import "../App.css";
 import "../customBlocks/custom_Blocks";
 import "../style/home.css"
@@ -20,14 +21,38 @@ import { faHandHoldingDroplet } from '@fortawesome/free-solid-svg-icons';
 import { faSun } from '@fortawesome/free-solid-svg-icons';
 import { faRoad } from '@fortawesome/free-solid-svg-icons';
 
-//vedc
+//add playground
+
+
+
+//generate clientID with random string
+const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+function generateString(length) {
+    let result = ' ';
+    const charactersLength = characters.length;
+    for (let i = 0; i < length; i++) {
+        result += characters.charAt(Math.floor(Math.random() * charactersLength));
+    }
+    return result;
+}
+
+//data mqtt
+// const dataMqtt = {
+//     host: "192.168.1.102",
+//     clientId: generateString(5),
+//     port: 1884,
+//     // port: 15672, // untuk port emqx: 8083, mosquitto: 8081/8080, hivemq: 8000
+//     username: "vedc",
+//     password: "vedc",
+// };
+
 const dataMqtt = {
-    host: "broker.mqttdashboard.com",
-    clientId: "KhoirulSkripsi2023",
+    host: "mqtt-dashboard.com",
+    clientId: generateString(5),
     port: 8000,
     // port: 15672, // untuk port emqx: 8083, mosquitto: 8081/8080, hivemq: 8000
-    username: "guest",
-    password: "guest",
+    username: "irul",
+    password: "irul",
 };
 // const dataMqtt = {
 //   host: "168.138.182.140",
@@ -114,14 +139,47 @@ export default function Workspace() {
                     },
                 ],
             },
+
             {
                 kind: "category",
-                name: "Timer",
-                colour: "#A55B80",
+                name: "Kontrol Relay",
+                colour: "#5BA58C",
                 contents: [
                     {
                         kind: "block",
-                        type: "set_timer",
+                        type: "iot_devboard",
+                    },
+                    {
+                        kind: "block",
+                        type: "aktuator_relay",
+                    },
+                ],
+            },
+
+            {
+                kind: "category",
+                name: "Timer With LED",
+                colour: "#A55B80",
+                contents: [
+                    // {
+                    //     kind: "block",
+                    //     type: "set_timer",
+                    // },
+                    {
+                        kind: "block",
+                        type: "aktuator_led_delay_1s",
+                    },
+                    {
+                        kind: "block",
+                        type: "aktuator_led_delay_3s",
+                    },
+                    {
+                        kind: "block",
+                        type: "aktuator_led_delay_5s",
+                    },
+                    {
+                        kind: "block",
+                        type: "delay_only",
                     },
                 ],
             },
@@ -137,14 +195,17 @@ export default function Workspace() {
                     {
                         "kind": "block",
                         "type": "text",
-                    }
+                    },
+
                 ],
             },
+
         ],
     };
 
     function workspaceDidChange(workspace) {
         const code = Blockly.JavaScript.workspaceToCode(workspace);
+
         // console.log(code);
         // const code2 = Blockly.Python.workspaceToCode(workspace);
         if (!code.toLocaleLowerCase().includes("device")) {
@@ -155,8 +216,6 @@ export default function Workspace() {
             setJavascriptCode(code);
         }
     }
-
-
 
 
     const runCode = () => {
@@ -170,6 +229,8 @@ export default function Workspace() {
         }
     };
 
+    //saving block
+
     // mqtt session
 
     // response dari mqtt
@@ -180,7 +241,8 @@ export default function Workspace() {
     const mqttConnect = () => {
         const { host, clientId, port, username, password } = dataMqtt;
         // const url = `ws://${host}:${port}/ws`;
-        const url = `ws://${host}:${port}/mqtt`;
+        // const url = `ws://${host}:${port}/mqtt`;
+        const url = `mqtt://${host}:${port}/mqtt`;
         const options = {
             keepalive: 30,
             protocolId: "MQTT",
@@ -273,7 +335,7 @@ export default function Workspace() {
     return (
         <>
             <Toaster />
-            <div style={{ backgroundColor: "#2E6ECD", padding: "2%" }}>
+            <div style={{ backgroundColor: "#471D8C", padding: "2%" }}>
                 <div
                     style={{
                         display: "flex",
@@ -319,7 +381,7 @@ export default function Workspace() {
                         <PlayIcon style={{ width: "2rem", height: "2rem" }} />
                     </button>
                 </div>
-                
+
                 <div style={{ width: "100%", position: "relative" }}>
                     <div
                         style={{
@@ -341,7 +403,7 @@ export default function Workspace() {
                         <FontAwesomeIcon icon={faRoad} className="px-2" />
                         Jarak : {payload?.jarak} <br />
                     </div>
-                    
+
 
                     {/* workspace */}
                     <div
@@ -351,6 +413,8 @@ export default function Workspace() {
                             borderRadius: "10px",
                         }}
                     >
+
+
                         {/* start levels */}
                         <div>
                             <p class="level text-white">Level Pembelajaran</p>
@@ -369,16 +433,17 @@ export default function Workspace() {
                                         <li class="page-item"><a class="page-link">4</a></li>
                                     </Link>
                                 </ul>
-                                
+
                             </nav>
-                            
+
                         </div>
                         {/* end levels */}
 
                         <BlocklyWorkspace
                             toolboxConfiguration={toolboxCategories}
                             initialXml={initialXml}
-                            className='fill-height'
+                            className='blocklyDiv'
+                            // className='fill-heigh'
                             workspaceConfiguration={{
                                 grid: {
                                     spacing: 20,

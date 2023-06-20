@@ -56,6 +56,90 @@ export default class introduction extends Component {
                                                 </p>
                                             </div>
                                         </section>
+
+                                        <section id="getting-started" class="doc-section">
+                                            <h2 class="section-title">Getting Started</h2>
+                                            <div class="section-block">
+                                                <p>
+                                                    Pada bagian ini akan menjelaskan bagaimana menggunakan aplikasi dan setup
+                                                    alat-alat yang di perlukan.
+                                                </p>
+                                                <div class="code-block">
+                                                    <h4>1. Persiapkan IoT Development Board</h4>
+                                                    <div class="code-block">
+                                                        <img src="/foto-board/persiapan.png" width={400} alt="..." />
+                                                    </div>
+                                                    <p>
+                                                        Sebelum melakukan aktifitas didalam Aplikasi Pembelaran ini yang harus yang harus 
+                                                        dipersiapkan oleh user adalah Perangkat IoT Development Board. 
+                                                    </p>
+                                                </div>
+                                                <div class="code-block">
+                                                    <h4>2. Setup IoT Development Board</h4>
+                                                    <div class="code-block">
+                                                        <img src="/foto-board/a2.jfif" width={400} alt="..." />
+                                                        <img src="/foto-board/a1.jfif" width={400} alt="..." />
+                                                        <img src="/foto-board/2.png" width={400} alt="..." />
+                                                    </div>
+                                                    <p>
+                                                        Langkah selanjutnya adalah dengan menyambungkan adapter dengan manancapkan 
+                                                        kabel ke input yang tersedia pada IoT Development Board. Lalu sambungkan juga adapter ke listrik
+                                                    </p>
+                                                    <div class="code-block">
+                                                        <p>
+                                                            Apabila sudah maka tekan tombol merah pada gambar dibawah
+                                                        </p>
+                                                        <div class="code-block">
+                                                            <img src="/foto-board/3.png" width={400} alt="..." />
+                                                        </div>
+                                                        <p>
+                                                            Tombol tersebut berfungsi unutuk menyalakan atau menghidupkan perangkat IoT Development Board yang kita miliki.
+                                                        </p>
+                                                        <div class="code-block">
+                                                            <p>
+                                                                Apabila sudah dinyalakan IoT Development Board akan seperti pada gambar dibawah ini
+                                                            </p>
+                                                        </div>
+                                                        <div class="code-block">
+                                                            <img src="/foto-board/4.png" width={400} alt="..." />
+                                                        </div>
+                                                        
+                                                    </div>
+                                                </div>
+                                                <div class="code-block">
+                                                    <h4>3. Konfigurasi</h4>
+                                                    <div class="code-block">
+                                                        <p>Langkah pertama adalah sambungkan komputer anda pada Acces Point IoT Devlopment Board</p>
+                                                        <img src="/dok/sam.png" width={400} alt="..." />
+                                                        <div class="code-block">
+                                                            <p>Nama Acces Point nya adalah Edu-IoT Board 01.</p>
+                                                            <p>Setelah menyambungkan masuk ke browser lalu kunjungi http://192.168.4.1/ .Maka tampilan akan seperti gambar dibawah</p>
+                                                        </div>
+                                                        <img src="/dok/koneksi.png" width={400} alt="..." />
+                                                        <div class="code-block">
+                                                            <p>Pada bagian ini kalian harus memasukkan Acces Point/Wifi yang tersedia dan WiFI tersebut
+                                                                mempunyai koneksi internet.
+                                                            </p>
+                                                        </div>
+                                                        <img src="/dok/con2.png" width={400} alt="..." />
+                                                        <div class="code-block">
+                                                            <p>Setelah selesai klik simpan lalu tunggu beberapa saat. Lihat pada bagian LCD IoT Development Board.
+                                                                Apabila LCD telah menampilkan Monitoring dari (Light, Temperature, Humidity, Distance) maka Konfigurasi berhasil.
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                    <p>
+                                                        Langkah Selanjutnya adalah dengan membuka web blok jangan lupa laptop harus terkoneksi dengan internet.
+                                                    </p>
+                                                    <div class="code-block">
+                                                        <img src="/dok/web.png" width={400} alt="..." />
+                                                    </div>
+                                                    
+                                                </div>
+                                                
+                                            </div>
+                                        </section>
+
                                         <section id="Fitur" class="doc-section">
                                             <h2 class="section-title">Fitur</h2>
                                             <div class="code-block">
@@ -219,6 +303,9 @@ export default class introduction extends Component {
                                         <nav id="doc-menu" class="nav doc-menu flex-column sticky">
                                             <li class="nav-item">
                                                 <a class="nav-link scrollto" href="#download-section">Introduction</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link scrollto" href="#getting-started">Getting Started</a>
                                             </li>
                                             <li class="nav-item">
                                                 <a class="nav-link scrollto" href="#Fitur">Fitur</a>

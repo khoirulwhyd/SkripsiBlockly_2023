@@ -145,21 +145,85 @@ export default class varBlock extends Component {
                                                     <img src="/blok/buzof.png" width={150} alt="..." />
                                                 </div>
                                             </div>
-                                            <div id="bloktimer" class="section-block">
-                                                <h3 class="block-title">Blok Kontrol Timer</h3>
-                                                <p>Blok timer berguna untuk memberikan timer/delay pada aktuator yang di eksekusi
+
+                                            <div id="blokkontrolrelay" class="section-block">
+                                                <h3 class="block-title">Blok Kontrol Relay</h3>
+                                                <p>Blok kontrol RELAY berguna untuk mengontrol aktuator RELAY dan yang ada pada IoT Development Board.
+                                                    Maksud dari mengontrol tersebut adalah menyalakan dan mematikan RELAY yang ada pada IoT Development Board.
                                                 </p>
                                                 <div class="code-block">
-                                                    <img src="/blok/timer.png" width={150} alt="..." />
+                                                    <h5>Value pada RELAY</h5>
+                                                    <p>
+                                                        Blok RELAY memiliki 2 value yaitu (RELAY = ON) dan (RELAY OFF) ketika user ingin menghidupkan buzzer, blok RELAY
+                                                        yang disusun harus RELAY ON. Ketika user ingin mematikan RELAY, maka blok RELAY yang disusun harus RELAY OFF. Untuk lebih
+                                                        jelasnya tertera pada gambar dibawah.
+                                                    </p>
                                                 </div>
                                                 <div class="code-block">
-                                                    <h5>Value pada Timer</h5>
+                                                    <img src="/blok/relay.png" width={400} alt="..." />
+                                                    
+                                                </div>
+                                            </div>
+
+                                            <div id="bloktimer" class="section-block">
+                                                <h3 class="block-title">Blok LED With Timer</h3>
+                                                <p>
+                                                    Block LED with timer berguna untuk mengontrol lama nyala LED pada IoT Development Board.
+                                                </p>
+                                                <div class="code-block">
+                                                    <img src="/blok/led timer.png" width={150} alt="..." />
+                                                </div>
+                                                <div class="code-block">
+                                                    <h5>Value pada Blok LED With Timer</h5>
                                                     <p>
-                                                        Blok timer terdiri dari angka 1 - 5. Angka tersebut akan menentukan berapa (detik) jeda/delay yang diinginkan oleh
-                                                        user. Ketika user ingin  mengeksekusi delay 3 detik maka blok yang disusun harus 3 juga. Seperti gambar dibawah
+                                                        Blok LED with Timer mempunyai value 1 detik, 3 detik, dan 5 detik.
                                                     </p>
+                                                </div>
+                                                <div class="code-block">
+                                                    <h5>Timer 1 Detik</h5>
                                                     <div class="code-block">
-                                                        <img src="/blok/timer3.png" width={150} alt="..." />
+                                                        <img src="/blok/valuetimer/1d.png" width={200} alt="..." />
+                                                        <div class="code-block">
+                                                            <p>
+                                                                Value 1 detik mempunyai 0-8 value. Maksud dari value tersebut adalah
+                                                                misal kita ingin menyalakan LED 1-3 secara bergantian kita harus memasukkan value 3 pada blok
+                                                                LED with Timer 1 detik.
+                                                            </p>
+                                                            <p>
+                                                                Ouput dari inputan tersebut berupa LED 1-3 pada IoT Development Board
+                                                                dalam 1 detik akan menyala secara bergantian lalu mati.
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                    <h5>Timer 3 Detik</h5>
+                                                    <div class="code-block">
+                                                        <img src="/blok/valuetimer/3d.png" width={200} alt="..." />
+                                                        <div class="code-block">
+                                                            <p>
+                                                                Value 3 detik mempunyai 0-8 value. Maksud dari value tersebut adalah
+                                                                misal kita ingin menyalakan LED 1-8 secara bergantian kita harus memasukkan value 8 pada blok
+                                                                LED with Timer 3 detik.
+                                                            </p>
+                                                            <p>
+                                                                Ouput dari inputan tersebut berupa LED 1-8 pada IoT Development Board
+                                                                dalam 3 detik akan menyala secara bergantian lalu mati.
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                    <h5>Timer 5 Detik</h5>
+                                                    <div class="code-block">
+                                                        <img src="/blok/valuetimer/3d.png" width={200} alt="..." />
+                                                        <div class="code-block">
+                                                            <p>
+                                                                Value 5 detik mempunyai 0-8 value. Maksud dari value tersebut adalah
+                                                                misal kita ingin menyalakan LED 1-2 secara bergantian kita harus memasukkan value 8 pada blok
+                                                                LED with Timer 5 detik.
+                                                            </p>
+                                                            <p>
+                                                                Ouput dari inputan tersebut berupa LED 1-2 pada IoT Development Board
+                                                                dalam 5 detik akan menyala secara bergantian lalu mati.
+                                                            </p>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -532,7 +596,10 @@ export default class varBlock extends Component {
                                                     <a class="nav-link scrollto" href="#blokkontrolbuzzer">Blok Kontrol Buzzer</a>
                                                 </li>
                                                 <li class="nav-item">
-                                                    <a class="nav-link scrollto" href="#bloktimer">Blok Timer</a>
+                                                    <a class="nav-link scrollto" href="#blokkontrolrelay">Blok Kontrol Relay</a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a class="nav-link scrollto" href="#bloktimer">Blok Kontrol LED with Timer</a>
                                                 </li>
                                                 <li class="nav-item">
                                                     <a class="nav-link scrollto" href="#blokteksprint">Blok Teks Print</a>

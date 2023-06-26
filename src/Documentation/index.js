@@ -127,7 +127,7 @@ export default class index extends Component {
                       </div>
                     </div>
                 </SwiperSlide>
-                <SwiperSlide>
+                {/* <SwiperSlide>
                     <div className="row gx-4 gx-lg-5 align-items-center my-5">
                       <div className="col-lg-7 mt-5">
                       <h2 class="title"><strong>Video Preview</strong>
@@ -141,7 +141,7 @@ export default class index extends Component {
                         <video controls src={MyVideo} type="video/mp4" width="100%" height="100%" class="rounded mb-4 mb-lg-0" />
                       </div>
                     </div>
-                </SwiperSlide>
+                </SwiperSlide> */}
               </Swiper>
               <section class="cards-section text-center">
                 <div class="container">

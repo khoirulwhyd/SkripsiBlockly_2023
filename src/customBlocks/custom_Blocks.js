@@ -425,3 +425,161 @@ Blockly.JavaScript['set_timer'] = function (block) {
 // goog.provide('Blockly.Blocks.custom');
 
 // goog.require('Blockly.Blocks');
+
+// led delay 1 s
+Blockly.Blocks["aktuator_led_delay_1s"] = {
+  init: function () {
+    this.appendDummyInput("led")
+      .appendField("Set LED")
+      .appendField(
+        new Blockly.FieldDropdown([
+          ["0", "0"],
+          ["1", "1"],
+          ["2", "2"],
+          ["3", "3"],
+          ["4", "4"],
+          ["5", "5"],
+          ["6", "6"],
+          ["7", "7"],
+          ["8", "8"],
+        ]),
+        "kondisi"
+      )
+      .appendField("with delay 1 seconds");
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setTooltip("");
+    this.setHelpUrl("");
+    this.setColour(65);
+  },
+};
+
+Blockly.JavaScript["aktuator_led_delay_1s"] = function (block) {
+  var dropdown_kondisi = block.getFieldValue("kondisi");
+  var value_led = Blockly.JavaScript.valueToCode(
+    block,
+    "led",
+    Blockly.JavaScript.ORDER_ATOMIC
+  );
+  // TODO: Assemble JavaScript into code variable.
+  var code = `client.publish("leddelay1", "${dropdown_kondisi}", "0");`;
+  return code;
+};
+
+// led delay 3s
+Blockly.Blocks["aktuator_led_delay_3s"] = {
+  init: function () {
+    this.appendDummyInput("led")
+      .appendField("Set LED")
+      .appendField(
+        new Blockly.FieldDropdown([
+          ["0", "0"],
+          ["1", "1"],
+          ["2", "2"],
+          ["3", "3"],
+          ["4", "4"],
+          ["5", "5"],
+          ["6", "6"],
+          ["7", "7"],
+          ["8", "8"],
+        ]),
+        "kondisi"
+      )
+      .appendField("with delay 3 seconds");
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setTooltip("");
+    this.setHelpUrl("");
+    this.setColour(315);
+  },
+};
+
+Blockly.JavaScript["aktuator_led_delay_3s"] = function (block) {
+  var dropdown_kondisi = block.getFieldValue("kondisi");
+  var value_led = Blockly.JavaScript.valueToCode(
+    block,
+    "led",
+    Blockly.JavaScript.ORDER_ATOMIC
+  );
+  // TODO: Assemble JavaScript into code variable.
+  var code = `client.publish("leddelay3", "${dropdown_kondisi}", "0");`;
+  return code;
+};
+
+// led delay 1 s
+Blockly.Blocks["aktuator_led_delay_5s"] = {
+  init: function () {
+    this.appendDummyInput("led")
+      .appendField("Set LED")
+      .appendField(
+        new Blockly.FieldDropdown([
+          ["0", "0"],
+          ["1", "1"],
+          ["2", "2"],
+          ["3", "3"],
+          ["4", "4"],
+          ["5", "5"],
+          ["6", "6"],
+          ["7", "7"],
+          ["8", "8"],
+        ]),
+        "kondisi"
+      )
+      .appendField("with delay 5 seconds");
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setTooltip("");
+    this.setHelpUrl("");
+    this.setColour(330);
+  },
+};
+
+Blockly.JavaScript["aktuator_led_delay_5s"] = function (block) {
+  var dropdown_kondisi = block.getFieldValue("kondisi");
+  var value_led = Blockly.JavaScript.valueToCode(
+    block,
+    "led",
+    Blockly.JavaScript.ORDER_ATOMIC
+  );
+  // TODO: Assemble JavaScript into code variable.
+  var code = `client.publish("leddelay5", "${dropdown_kondisi}", "0");`;
+  return code;
+};
+
+//add delay custom block
+Blockly.Blocks["delay_only"] = {
+  init: function () {
+    this.appendDummyInput("delay")
+      .appendField("DELAY")
+      .appendField(
+        new Blockly.FieldDropdown([
+          ["0", "0"],
+          ["1", "1"],
+          ["2", "2"],
+          ["3", "3"],
+          ["4", "4"],
+          ["5", "5"],
+          ["6", "6"],
+          ["7", "7"],
+          ["8", "8"],
+        ]),
+        "kondisi"
+      );
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setTooltip("");
+    this.setHelpUrl("");
+  },
+};
+
+Blockly.JavaScript["delay_only"] = function (block) {
+  var dropdown_kondisi = block.getFieldValue("kondisi");
+  var value_led = Blockly.JavaScript.valueToCode(
+    block,
+    "led",
+    Blockly.JavaScript.ORDER_ATOMIC
+  );
+  // TODO: Assemble JavaScript into code variable.
+  var code = `client.publish("delay", "${dropdown_kondisi * 1000}", "0");`;
+  return code;
+};

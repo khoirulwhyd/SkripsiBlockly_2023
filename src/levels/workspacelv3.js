@@ -104,13 +104,12 @@ export default function Workspace() {
                 contents: [
                     {
                         kind: "block",
-                        type: "controls_forEach",
+                        type: "controls_for",
                     },
                     {
                         kind: "block",
-                        type: "controls_for",
+                        type: "controls_forEach",
                     },
-
                     {
                         kind: "block",
                         type: "controls_whileUntil",

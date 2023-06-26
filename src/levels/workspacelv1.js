@@ -21,8 +21,8 @@ import { faHandHoldingDroplet } from '@fortawesome/free-solid-svg-icons';
 import { faSun } from '@fortawesome/free-solid-svg-icons';
 import { faRoad } from '@fortawesome/free-solid-svg-icons';
 
-//add playground
-
+//add clientid
+const clientId = `mqtt_${Math.random().toString(16).slice(3)}`
 
 
 //generate clientID with random string
@@ -35,6 +35,7 @@ function generateString(length) {
     }
     return result;
 }
+console.log(clientId);
 
 //data mqtt
 // const dataMqtt = {
@@ -43,17 +44,18 @@ function generateString(length) {
 //     port: 1884,
 //     // port: 15672, // untuk port emqx: 8083, mosquitto: 8081/8080, hivemq: 8000
 //     username: "vedc",
-//     password: "vedc",
+//     password: "vedc",    
 // };
 
 const dataMqtt = {
     host: "mqtt-dashboard.com",
-    clientId: generateString(5),
+    clientId,
     port: 8000,
     // port: 15672, // untuk port emqx: 8083, mosquitto: 8081/8080, hivemq: 8000
-    username: "irul",
-    password: "irul",
+    username: "",
+    password: "",
 };
+
 // const dataMqtt = {
 //   host: "168.138.182.140",
 //   clientId: "WebApp_HUB_Skripsi",
@@ -177,10 +179,7 @@ export default function Workspace() {
                         kind: "block",
                         type: "aktuator_led_delay_5s",
                     },
-                    {
-                        kind: "block",
-                        type: "delay_only",
-                    },
+                    
                 ],
             },
             {
